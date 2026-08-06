@@ -20,4 +20,5 @@ each answer.
 | Integrations & sync | [integrations.md](./integrations.md) |
 | Billing, plans & add-ons | [billing.md](./billing.md) |
 | Rented machine-users | [rented-machines.md](./rented-machines.md) |
+| Marketplace & knowledge | [marketplace.md](./marketplace.md) |
 | Troubleshooting | [troubleshooting.md](./troubleshooting.md) |

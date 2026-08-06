@@ -42,6 +42,22 @@ Pairing links one CLI to one machine-user via a **1 → 2 → 3 hashcode chain**
   connection and deletes its credential).
 - To move a project's worker to a new machine, re-pair its machine-user there.
 
+## How to run the CLI: direct, container & headless
+
+You can run the `4pm` CLI two ways — the web **CLI** / machines area shows copy-paste commands for
+each:
+
+- **Direct** — install `@4pm/cli` straight on the worker and run it on the host (no Docker, no
+  sandbox). Best for a personal worker or a dev machine.
+- **Docker (container = sandbox)** — run the CLI as a Docker/Podman container; **the container is
+  the sandbox** that isolates the agent from the host. Pull the published image (a `full` variant
+  bundles the toolchain — `claude`/`codex`/`gh`/`glab`/`git`), pair once, then run the worker.
+
+Either way the worker can run **headless** — a long-lived daemon you **observe from the web
+Console** — and you can optionally **attach an interactive TUI** to a running headless daemon when
+you want a terminal view. For pools/automation, a container can **self-pair with a provisioning
+token** so there's no interactive pairing step.
+
 ## After pairing
 
 Once a CLI is paired and connected, its **machine-user** shows up under the machines area of the

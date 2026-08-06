@@ -23,14 +23,16 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [projects](./docs/05-projects.md) · [running AI agents](./docs/06-running-ai-agents.md) ·
 [git operations](./docs/07-git-operations.md) · [autonomous mode](./docs/08-autonomous-mode.md) ·
 [integrations](./docs/09-integrations.md) · [billing & plans](./docs/10-billing-and-plans.md) ·
-[rented machines](./docs/11-rented-machines.md) · [getting help](./docs/12-getting-help.md).
+[rented machines](./docs/11-rented-machines.md) · [getting help](./docs/12-getting-help.md) ·
+[marketplace & knowledge](./docs/13-marketplace.md).
 
 **FAQ** (quick Q&A): [getting-started](./faq/getting-started.md) ·
 [account & login](./faq/account-and-login.md) · [workers & pairing](./faq/workers-and-pairing.md) ·
 [projects](./faq/projects.md) · [AI commands](./faq/ai-commands.md) ·
 [git operations](./faq/git-operations.md) · [autonomous mode](./faq/autonomous-mode.md) ·
 [integrations](./faq/integrations.md) · [billing](./faq/billing.md) ·
-[rented machines](./faq/rented-machines.md) · [troubleshooting](./faq/troubleshooting.md).
+[rented machines](./faq/rented-machines.md) · [marketplace & knowledge](./faq/marketplace.md) ·
+[troubleshooting](./faq/troubleshooting.md).
 
 ## Conventions
 

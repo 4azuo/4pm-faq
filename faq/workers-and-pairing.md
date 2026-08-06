@@ -20,6 +20,12 @@ and the server returns (3) which the CLI saves. Full steps:
 **Can one machine run several projects?**
 Yes — run several CLIs on the same worker; each has its own machine-user and serves one project.
 
+**Do agents run in a sandbox? Can I run the CLI in Docker / headless?**
+You can install the CLI **directly** on the host, or run it as a **Docker/Podman container** where
+the container itself is the **sandbox** isolating the agent from the host. Either way it can run
+**headless** (observed from the web Console), with an optional **TUI** you attach to the running
+daemon. See [docs/03 — run modes](../docs/03-connect-a-worker.md#how-to-run-the-cli-direct-container--headless).
+
 **My hashcode was rejected.**
 Hashcodes are short-lived. Restart pairing and enter them promptly.
 

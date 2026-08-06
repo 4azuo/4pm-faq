@@ -21,3 +21,4 @@ Written for **end users of 4PM** — task-oriented, English, no internal-only de
 | 10 | [Plans, billing & add-ons](./10-billing-and-plans.md) | Plans, checkout, credit wallet, add-ons. |
 | 11 | [Rent a 4PM machine-user](./11-rented-machines.md) | Use a pooled worker without running your own. |
 | 12 | [Get help & support](./12-getting-help.md) | In-app Help chat and human email support. |
+| 13 | [Marketplace & knowledge hub](./13-marketplace.md) | Install/publish skills & subagents; share posts. |

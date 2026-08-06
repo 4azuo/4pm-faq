@@ -19,6 +19,8 @@ billing from one screen.**
 - **Run autonomously** — let a project work on a schedule (auto-cycle) while you approve tasks.
 - **Integrate your tools** — connect GitHub, Jira, Backlog or Confluence and sync work items
   two ways.
+- **Reuse building blocks** — install skills & subagents from the **marketplace** (or publish your
+  own) and share write-ups in the **knowledge hub**.
 - **Control access & cost** — organizations, teams, roles/permissions, quota and billing.
 
 ## Core concepts
