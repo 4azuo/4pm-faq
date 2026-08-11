@@ -24,7 +24,7 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [git operations](./docs/07-git-operations.md) · [autonomous mode](./docs/08-autonomous-mode.md) ·
 [integrations](./docs/09-integrations.md) · [billing & plans](./docs/10-billing-and-plans.md) ·
 [rented machines](./docs/11-rented-machines.md) · [getting help](./docs/12-getting-help.md) ·
-[marketplace & knowledge](./docs/13-marketplace.md).
+[marketplace & knowledge](./docs/13-marketplace.md) · [worker tools](./docs/14-worker-tools.md).
 
 **FAQ** (quick Q&A): [getting-started](./faq/getting-started.md) ·
 [account & login](./faq/account-and-login.md) · [workers & pairing](./faq/workers-and-pairing.md) ·
@@ -32,7 +32,7 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [git operations](./faq/git-operations.md) · [autonomous mode](./faq/autonomous-mode.md) ·
 [integrations](./faq/integrations.md) · [billing](./faq/billing.md) ·
 [rented machines](./faq/rented-machines.md) · [marketplace & knowledge](./faq/marketplace.md) ·
-[troubleshooting](./faq/troubleshooting.md).
+[worker tools](./faq/worker-tools.md) · [troubleshooting](./faq/troubleshooting.md).
 
 ## Conventions
 
