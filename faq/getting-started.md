@@ -6,8 +6,8 @@ AI agents (Claude / Codex) on your worker machines, and streams their progress t
 dashboard so humans stay in control. See [docs/01-overview](../docs/01-overview.md).
 
 **What's the fastest path from zero to running AI?**
-1. **Register** — create your organization and verify your email
-   ([docs/02](../docs/02-accounts-and-login.md)).
+1. **Register** — create your organization with email/password (verify your email) or **Google /
+   GitHub SSO** ([docs/02](../docs/02-accounts-and-login.md)).
 2. **Pair a worker** — install the `4pm` CLI on a machine and pair it
    ([docs/03](../docs/03-connect-a-worker.md)).
 3. **Create a project** — run the two-step wizard and attach your machine-user

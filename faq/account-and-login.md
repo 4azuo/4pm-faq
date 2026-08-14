@@ -5,9 +5,16 @@ Register with a username, email and password. This creates your **organization**
 **root** user, and sends a verification email. Details:
 [docs/02](../docs/02-accounts-and-login.md).
 
+**Can I sign in with Google or GitHub?**
+Yes. Use **Sign in with Google** or **Sign in with GitHub** on the login page — the provider
+verifies you and logs you in without a password. You can also **start registration** from a
+provider (it verifies your email, so no verification mail is needed). SSO accounts have no
+password; sign back in with the same provider. **SAML** (enterprise IdP) is planned but not
+enabled yet. See [docs/02](../docs/02-accounts-and-login.md#sign-in-with-google-or-github-sso).
+
 **Why can't I log in right after registering?**
-You must **verify your email** first via the link 4PM sends. Login isn't possible before
-verification.
+You must **verify your email** first via the link 4PM sends (email/password sign-up only). Login
+isn't possible before verification.
 
 **I have the right password but login fails — why?**
 Check your **login mode**. Leave the *Organization Identifier* empty to log in as the **root**

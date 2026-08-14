@@ -45,6 +45,21 @@ expires (7 days by default) you'll need to log in again.
 - The code is single-use and expires quickly. If you mistype it too many times, request login
   again.
 
+## Sign in with Google or GitHub (SSO)
+
+Instead of a password you can use **single sign-on**:
+
+- **Sign in with Google** or **Sign in with GitHub** from the login page — the provider verifies
+  your identity and you're logged straight in, no password step.
+- **Register from a provider:** the register form can **start from** Google or GitHub. The provider
+  verifies your email, then you complete the register step to create your org — because the email is
+  already provider-verified, there's no separate verification email to open.
+- An SSO account created this way has **no password**; sign back in with the same provider (you can
+  add a password later from account settings if you want one).
+
+> **SAML** (per-organization enterprise IdP) is planned but **not enabled yet** — today SSO is
+> Google and GitHub.
+
 ## Roles & permissions
 
 Access is controlled by **roles** granted to each user, for example:
