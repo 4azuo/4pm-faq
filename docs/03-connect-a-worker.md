@@ -42,21 +42,23 @@ Pairing links one CLI to one machine-user via a **1 → 2 → 3 hashcode chain**
   connection and deletes its credential).
 - To move a project's worker to a new machine, re-pair its machine-user there.
 
-## How to run the CLI: direct, container & headless
+## How to run the CLI: direct, Docker & headless
 
-You can run the `4pm` CLI two ways — the web **CLI** / machines area shows copy-paste commands for
-each:
+You can run the `4pm` CLI two ways — the web **CLI** page (`/cli`) and the machines area show
+copy-paste commands with your server URL and version already filled in:
 
-- **Direct** — install `@4pm/cli` straight on the worker and run it on the host (no Docker, no
-  sandbox). Best for a personal worker or a dev machine.
-- **Docker (container = sandbox)** — run the CLI as a Docker/Podman container; **the container is
-  the sandbox** that isolates the agent from the host. Pull the published image (a `full` variant
-  bundles the toolchain — `claude`/`codex`/`gh`/`glab`/`git`), pair once, then run the worker.
+- **Run directly** — install `@4pm/cli` on the worker (`npm i -g @4pm/cli`, needs Node ≥ 20) and
+  run it on the host. **No Docker, no sandbox.** Best for a personal worker or a dev machine.
+- **Docker (headless)** — run the CLI as a container; **the container is the sandbox** that
+  isolates the agent from the host. Pull the published image (`ghcr.io/4azuo/4pm-cli:full` bundles
+  `claude`/`codex`/`gh`/`glab`/`git`), pair once, then run the worker.
 
-Either way the worker can run **headless** — a long-lived daemon you **observe from the web
-Console** — and you can optionally **attach an interactive TUI** to a running headless daemon when
-you want a terminal view. For pools/automation, a container can **self-pair with a provisioning
-token** so there's no interactive pairing step.
+Either way the worker runs **headless** — a long-lived daemon you **observe from the web
+Console** — and you can optionally **attach a terminal (TUI)** to it when you want one. On
+**Windows**, run the CLI inside **WSL2 (Ubuntu)** — the AI toolchain expects real Linux.
+
+**For the full step-by-step install (npm, tarball, Docker headless, `4pm ai-login`, `4pm attach`,
+profiles) see [Install & run the CLI](./15-install-cli.md).**
 
 ## After pairing
 

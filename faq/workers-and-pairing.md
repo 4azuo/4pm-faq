@@ -20,11 +20,17 @@ and the server returns (3) which the CLI saves. Full steps:
 **Can one machine run several projects?**
 Yes — run several CLIs on the same worker; each has its own machine-user and serves one project.
 
+**How do I install the CLI?**
+With **Node ≥ 20**: `npm i -g @4pm/cli`, then `4pm --version`. No npm? Use the release tarball or
+Docker. The in-app `/cli` page has copy-paste commands for each OS. Full steps:
+[docs/15](../docs/15-install-cli.md).
+
 **Do agents run in a sandbox? Can I run the CLI in Docker / headless?**
-You can install the CLI **directly** on the host, or run it as a **Docker/Podman container** where
-the container itself is the **sandbox** isolating the agent from the host. Either way it can run
-**headless** (observed from the web Console), with an optional **TUI** you attach to the running
-daemon. See [docs/03 — run modes](../docs/03-connect-a-worker.md#how-to-run-the-cli-direct-container--headless).
+You can install the CLI **directly** on the host, or run it as a **Docker container** where the
+container itself is the **sandbox** isolating the agent from the host (pull
+`ghcr.io/4azuo/4pm-cli:full`, pair once, sign in with `4pm ai-login`, run detached). Either way it
+runs **headless** (observed from the web Console), with an optional **TUI** you attach via
+`4pm attach`. See [docs/15](../docs/15-install-cli.md#option-2--docker-headless).
 
 **My hashcode was rejected.**
 Hashcodes are short-lived. Restart pairing and enter them promptly.

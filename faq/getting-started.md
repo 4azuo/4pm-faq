@@ -8,8 +8,8 @@ dashboard so humans stay in control. See [docs/01-overview](../docs/01-overview.
 **What's the fastest path from zero to running AI?**
 1. **Register** — create your organization with email/password (verify your email) or **Google /
    GitHub SSO** ([docs/02](../docs/02-accounts-and-login.md)).
-2. **Pair a worker** — install the `4pm` CLI on a machine and pair it
-   ([docs/03](../docs/03-connect-a-worker.md)).
+2. **Pair a worker** — install the `4pm` CLI on a machine (`npm i -g @4pm/cli`, or Docker) and pair
+   it ([install](../docs/15-install-cli.md) · [pairing](../docs/03-connect-a-worker.md)).
 3. **Create a project** — run the two-step wizard and attach your machine-user
    ([docs/05](../docs/05-projects.md)).
 4. **Run AI** — open the project Console and dispatch a prompt
@@ -20,8 +20,9 @@ Either run your own worker (pair its CLI), or **rent a 4PM-operated machine-user
 so you don't have to run anything yourself ([docs/11](../docs/11-rented-machines.md)).
 
 **What do I need on the worker?**
-The `4pm` CLI (it auto-updates), plus the tools you'll use — typically `git`, `gh`/`glab`, and
-`claude` — authenticated as needed.
+**Node ≥ 20** and the `4pm` CLI (it auto-updates), plus the tools you'll use — typically `git`,
+`gh`/`glab`, and `claude` — authenticated as needed. On **Windows**, run inside WSL2 (Ubuntu). Full
+install (npm, tarball, Docker headless): [docs/15](../docs/15-install-cli.md).
 
 **Is there a free tier?**
 Yes — every organization starts on the **Free** plan. You can upgrade to Pro/Max any time

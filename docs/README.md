@@ -20,6 +20,11 @@ Written for **end users of 4PM** — task-oriented, English, no internal-only de
 | 09 | [Integrations & sync](./09-integrations.md) | Connect GitHub/Jira/Backlog/Confluence, sync. |
 | 10 | [Plans, billing & add-ons](./10-billing-and-plans.md) | Plans, checkout, credit wallet, add-ons. |
 | 11 | [Rent a 4PM machine-user](./11-rented-machines.md) | Use a pooled worker without running your own. |
-| 12 | [Get help & support](./12-getting-help.md) | In-app Help chat and human email support. |
+| 12 | [Get help & support](./12-getting-help.md) | In-app Help chat, human email support, the Support ticket page. |
 | 13 | [Marketplace & knowledge hub](./13-marketplace.md) | Install/publish skills & subagents; share posts. |
 | 14 | [Worker tools](./14-worker-tools.md) | See/install the CLIs on a worker (git/node/npm/pnpm/claude/codex/gh/glab). |
+| 15 | [Install & run the CLI](./15-install-cli.md) | npm/tarball, Docker (headless), `ai-login`/`attach`, WSL2, profiles. |
+| 16 | [Your account & settings](./16-account-settings.md) | Display name, avatar, password, email/phone, linked accounts. |
+| 17 | [Quotas, usage & notifications](./17-quotas-and-notifications.md) | Set/read quotas & usage; the notification center. |
+| 18 | [Teams, members & permissions](./18-teams-and-permissions.md) | Teams & leads, allow/deny/inherit grants, invitations. |
+| 19 | [Community (4rum)](./19-community.md) | Org-level feed/forum; project-tagged posts. |

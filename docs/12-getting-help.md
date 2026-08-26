@@ -33,6 +33,21 @@ Escalating (or emailing support directly) opens a **support request** that goes 
 queue. A human reviews it and replies by email. Your chat transcript is included so you don't have
 to re-explain the context.
 
+## The Support requests page
+
+You can also file and follow tickets yourself on the **Support** page (open it from the
+**Support** button in the user menu or footer):
+
+- **Create a request** — pick a **category**, write a **subject** and a **body** (Markdown), and
+  optionally add an **attachment**. 4PM auto-attaches useful context (the screen you were on, your
+  org/project, app version, language) so you don't have to describe your setup.
+- **Track your tickets** — see all your requests with their **status**, filter by status/category,
+  and open one to read the full **thread**.
+- **Reply or close** — continue the conversation with support, or **close** the ticket when it's
+  resolved. New replies from support arrive as a **notification**.
+
+The Help chat's **"email a human"** action opens this same form and carries your transcript along.
+
 ## Tips for faster answers
 
 - Say **what you were doing** and **what happened** (the exact error message helps).
