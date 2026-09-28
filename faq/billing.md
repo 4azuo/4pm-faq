@@ -43,3 +43,10 @@ default) while 4PM retries and notifies you. If the grace period lapses, the org
 **Where do I see charges?**
 The **statement** shows the current period (plan + add-ons as line items); the **payment history**
 lists past periods across both payment methods.
+
+**How do I sign up for Enterprise? What are the requirements and pricing?**
+Enterprise is a **custom, non-self-serve** plan — it isn't picked in **/billing** like Free/Pro/Max.
+Procedure, requirements and pricing are **arranged directly with the 4PM team**, not published in
+docs. Open a **support request** (Support in the user menu or footer) describing your Enterprise
+needs, or use the in-app **Help** chat and choose "email a human". Only an **ADMIN** can change an
+org's plan.
