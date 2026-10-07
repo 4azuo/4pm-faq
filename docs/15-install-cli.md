@@ -20,14 +20,14 @@ see [Connect a worker](./03-connect-a-worker.md).
   (`claude` / `codex`) — authenticated as needed. You can also install these later from the
   **Tools** tab — see [Worker tools](./14-worker-tools.md).
 - **Windows:** run the CLI inside **WSL2 (Ubuntu)**, not native Windows — the AI toolchain expects
-  a real Linux environment. Install WSL2 (`wsl --install -d Ubuntu`), install Node 20 inside
+  a real Linux environment. Install WSL2 (`wsl --install -d Ubuntu`), install Node 24 inside
   Ubuntu, then follow the Linux steps below. (The Docker path uses Docker Desktop + WSL2.)
 
 ---
 
 ## Option 1 — Run directly (npm)
 
-The simplest path when Node ≥ 20 is present:
+The simplest path when Node ≥ 24 is present:
 
 ```bash
 npm i -g @4pm/cli     # install (public npm, no auth needed)

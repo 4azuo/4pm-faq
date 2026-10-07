@@ -1,7 +1,7 @@
 # Installing & running the CLI
 
 **How do I install the `4pm` CLI?**
-The quickest way, with **Node ≥ 20** on the machine, is npm: `npm i -g @4pm/cli`, then
+The quickest way, with **Node ≥ 24** on the machine, is npm: `npm i -g @4pm/cli`, then
 `4pm --version`. No npm? Download the release tarball, verify the checksum shown on the `/cli`
 page, and run it. Full steps: [docs/15](../docs/15-install-cli.md).
 
@@ -46,7 +46,7 @@ is lost.
 
 **I'm on Windows.**
 Run the CLI inside **WSL2 (Ubuntu)** — the AI toolchain expects a real Linux environment. Install
-WSL2 (`wsl --install -d Ubuntu`) + Node 20 inside Ubuntu, then use the Linux steps. The Docker path
+WSL2 (`wsl --install -d Ubuntu`) + Node 24 inside Ubuntu, then use the Linux steps. The Docker path
 uses Docker Desktop + WSL2.
 
 **Can one machine run several workers?**

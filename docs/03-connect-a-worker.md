@@ -47,7 +47,7 @@ Pairing links one CLI to one machine-user via a **1 → 2 → 3 hashcode chain**
 You can run the `4pm` CLI two ways — the web **CLI** page (`/cli`) and the machines area show
 copy-paste commands with your server URL and version already filled in:
 
-- **Run directly** — install `@4pm/cli` on the worker (`npm i -g @4pm/cli`, needs Node ≥ 20) and
+- **Run directly** — install `@4pm/cli` on the worker (`npm i -g @4pm/cli`, needs Node ≥ 24) and
   run it on the host. **No Docker, no sandbox.** Best for a personal worker or a dev machine.
 - **Docker (headless)** — run the CLI as a container; **the container is the sandbox** that
   isolates the agent from the host. Pull the published image (`ghcr.io/4azuo/4pm-cli:full` bundles

@@ -21,7 +21,7 @@ and the server returns (3) which the CLI saves. Full steps:
 Yes — run several CLIs on the same worker; each has its own machine-user and serves one project.
 
 **How do I install the CLI?**
-With **Node ≥ 20**: `npm i -g @4pm/cli`, then `4pm --version`. No npm? Use the release tarball or
+With **Node ≥ 24**: `npm i -g @4pm/cli`, then `4pm --version`. No npm? Use the release tarball or
 Docker. The in-app `/cli` page has copy-paste commands for each OS. Full steps:
 [docs/15](../docs/15-install-cli.md).
 

@@ -20,7 +20,7 @@ Either run your own worker (pair its CLI), or **rent a 4PM-operated machine-user
 so you don't have to run anything yourself ([docs/11](../docs/11-rented-machines.md)).
 
 **What do I need on the worker?**
-**Node ≥ 20** and the `4pm` CLI (it auto-updates), plus the tools you'll use — typically `git`,
+**Node ≥ 24** and the `4pm` CLI (it auto-updates), plus the tools you'll use — typically `git`,
 `gh`/`glab`, and `claude` — authenticated as needed. On **Windows**, run inside WSL2 (Ubuntu). Full
 install (npm, tarball, Docker headless): [docs/15](../docs/15-install-cli.md).
 
