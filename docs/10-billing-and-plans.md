@@ -16,7 +16,7 @@ top up specific limits without changing plan.
 | Hosted storage | 1 GB | 10 GB | 100 GB | unlimited |
 | Data retention | 15 days | 90 days | 365 days | unlimited |
 | Memo items | 200 | 2 000 | 10 000 | unlimited |
-| New autonomous rows / book / month | 100 | 500 | 3 000 | unlimited |
+| New autonomous rows / book / month | 300 | 1 000 | 5 000 | unlimited |
 | Automation rules · rule runs / day | — | 50 · 500 | 100 · 5 000 | unlimited |
 | Teams, chat, worker pools, integrations, marketplace publishing, usage alerts, announcements | — | ✓ | ✓ | ✓ |
 | Community (4rum) | — | — | ✓ | ✓ |

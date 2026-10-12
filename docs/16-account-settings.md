@@ -65,6 +65,12 @@ settings gear to remember its rows per page, sort and filters.
   too.
 - **What's new** (footer) lists the latest changes and what's coming soon.
 
+## API clients
+
+In **Settings › API clients** you create clients that let your own scripts and tools use 4PM through the
+public API. A client acts as you, limited to the scopes you choose, and can never approve anything — see
+[Public API & API clients](./32-public-api.md).
+
 ## IP allowlist
 
 Your account can be restricted to certain IPs. Only an **ADMIN** (or a manager of your account)

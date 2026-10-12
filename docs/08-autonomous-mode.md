@@ -109,8 +109,8 @@ Each run uses the **model of the worker's AI profile** — there's no separate a
 
 ## Plan limits
 
-Each plan caps the **new rows per book per month** (User Todo, User Q&A, AI Todo — Free 100, Pro 500,
-Max 3 000). At the cap, the AI stops adding rows but still implements approved tasks. A full hosted
+Each plan caps the **new rows per book per month** (User Todo, User Q&A, AI Todo — Free 300, Pro 1 000,
+Max 5 000). At the cap, the AI stops adding rows but still implements approved tasks. A full hosted
 storage also pauses new runs.
 
 ## Notifications

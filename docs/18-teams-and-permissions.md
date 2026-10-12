@@ -40,6 +40,9 @@ On the Permissions screen you:
 - There's a searchable **matrix** view and a **JSON** view for bulk edits.
 - The **root** user isn't listed — it's fully privileged and can't be edited.
 
+The **Roles** tab of the Permissions screen shows what every role gets by default (TL = team lead), which
+roles may own API clients, and which permissions can be used through the public API.
+
 If an action is blocked for you, you're likely missing a permission — ask an ADMIN or PM to grant
 it. The permission matrix is also embedded in each user/team/project page.
 

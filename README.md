@@ -49,7 +49,7 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [task books & approvals](./faq/task-books-and-approvals.md) · [customer accounts](./faq/customer-accounts.md) ·
 [checklists](./faq/checklists.md) · [automation rules](./faq/automation-rules.md) ·
 [project content](./faq/project-content.md) · [generators](./faq/generators.md) ·
-[settings](./faq/settings.md) ·
+[settings](./faq/settings.md) · [public API](./faq/public-api.md) ·
 [integrations](./faq/integrations.md) · [billing](./faq/billing.md) ·
 [rented machines](./faq/rented-machines.md) · [marketplace & knowledge](./faq/marketplace.md) ·
 [worker tools](./faq/worker-tools.md) · [quotas & notifications](./faq/quotas-and-notifications.md) ·

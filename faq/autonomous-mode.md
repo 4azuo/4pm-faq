@@ -49,6 +49,10 @@ to continue.
 **The AI asked a question in User Q&A.**
 The task needs a decision. Answer it (and approve the answer); the task resumes on the next run.
 
+**Can I make it run now instead of waiting for the schedule?**
+Yes, through the public API: `POST /v1/projects/{id}/autonomous/run` runs one cycle right away (the worker needs an
+up-to-date CLI). Paused mode and quiet hours still apply. See [Public API](../docs/32-public-api.md#run-autonomous-mode-now).
+
 **Which AI model does it use?**
 The model of the worker's AI profile. There's no separate autonomous model setting.
 
@@ -61,5 +65,5 @@ Those actions are blocked while autonomous is running on that worker, so they do
 Pause autonomous first.
 
 **Is there a limit on how many rows the AI can add?**
-Yes — new rows per book per month depend on your plan (Free 100, Pro 500, Max 3 000). At the cap the
+Yes — new rows per book per month depend on your plan (Free 300, Pro 1 000, Max 5 000). At the cap the
 AI stops adding rows but keeps implementing approved tasks.

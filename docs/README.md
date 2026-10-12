@@ -40,6 +40,6 @@ Written for **end users of 4PM** — task-oriented, English, no internal-only de
 | 29 | [Customer accounts (CLIENT)](./29-customer-accounts.md) | Invite customers; what they see and do. |
 | 30 | [Generators, doc types & templates](./30-generators-and-doc-types.md) | Doc types, template files, generate, access. |
 | 31 | [AI Research, announcements & chat](./31-research-announcements-and-chat.md) | Research, announcements, Messenger, chat dock, memo. |
-| 32 | [Public API & OAuth clients](./32-public-api.md) | API clients, tokens, the `/developers/api` reference. |
+| 32 | [Public API & API clients](./32-public-api.md) | Personal API clients that act as you, scopes, tokens, runs, the `/developers/api` reference. |
 | 33 | [Organization settings & administration](./33-organization-settings.md) | Org Settings sections, Organization tab, audit log, admin tabs, legal. |
 | 34 | [Project settings](./34-project-settings.md) | Access, AI limits, budgets, outbound review, lifecycle. |

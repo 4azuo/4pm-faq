@@ -108,7 +108,7 @@ spec down to the worker's `project.spec.json`. The approval confirmation lists w
 
 ## Plan limits
 
-New rows per book per month are capped by plan (Free 100, Pro 500, Max 3 000, Enterprise unlimited).
+New rows per book per month are capped by plan (Free 300, Pro 1 000, Max 5 000, Enterprise unlimited).
 The Usage tab shows your count.
 
 See also: [Autonomous mode](./08-autonomous-mode.md) ·

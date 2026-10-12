@@ -18,6 +18,7 @@ each answer.
 | Worker pools & AI routing | [worker-pools-and-routing.md](./worker-pools-and-routing.md) |
 | Account settings | [account-settings.md](./account-settings.md) |
 | Organization & project settings | [settings.md](./settings.md) |
+| Public API & API clients | [public-api.md](./public-api.md) |
 | Projects | [projects.md](./projects.md) |
 | AI commands & console | [ai-commands.md](./ai-commands.md) |
 | Git operations & merge | [git-operations.md](./git-operations.md) |

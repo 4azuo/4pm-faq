@@ -17,7 +17,7 @@ organization are listed at the end.
 | **Network** | Hosts blocked for **every** project's AI runs, and how long network logs are kept. See [Project content › Networks](./25-project-content.md#networks). |
 | **Storage** | Storage by content type, clearing old content, storage alerts and auto clear. See [Quotas, usage & notifications](./17-quotas-and-notifications.md#storage). |
 | **Marketplace hooks** | Whether projects may install hooks from other organizations' packages (off by default). |
-| **API integrations** (root only) | OAuth clients for the public API — see [Public API](./32-public-api.md). |
+| **API integrations** (ADMIN / root) | Every API client of the organization and who it acts as; revoke or delete any. Each person creates their own clients in their profile — see [Public API](./32-public-api.md). |
 
 Some caps (max checklists and versions kept, max worker-config templates) are set for your organization
 by 4PM and shown read-only.
