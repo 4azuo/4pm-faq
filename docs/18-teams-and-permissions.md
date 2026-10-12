@@ -5,7 +5,9 @@ people in with **invitations**.
 
 ## Teams
 
-A **team** groups human users and the projects they work on. On a team's page you can:
+A **team** groups human users and the projects they work on (teams need the Pro plan or higher). Each
+team has a short **team code**, used to tag rows in the task books (see
+[Task books & approvals](./28-task-books-and-approvals.md#teams-on-the-books)). On a team's page you can:
 
 - See the team **info** and activity stats.
 - Manage **members** — attach or detach users (a confirmation dialog shows what a user is attached
@@ -28,13 +30,23 @@ On the Permissions screen you:
 2. For each permission, set **allow**, **deny**, or **inherit**.
 
 - Resolution order is **project → team → user** — a more specific grant wins.
-- **ADMIN** can set grants for users, teams and projects; **PM** can set them for projects only;
-  other roles view the catalog read-only.
+- **ADMIN** can set grants for users, teams and projects; **PM** can set them for projects only —
+  including granting a permission to **one member** of their project (e.g. letting a developer change
+  that project's git configuration); other roles view the catalog read-only.
+- Every permission shows **which screens and actions it unlocks**, with a warning on sensitive ones.
+- **Worker (machine)** and **customer (CLIENT)** accounts list only the permissions that apply to their
+  role, and no grant can give them more (a worker can never get admin, secret, network or other
+  management permissions).
 - There's a searchable **matrix** view and a **JSON** view for bulk edits.
 - The **root** user isn't listed — it's fully privileged and can't be edited.
 
 If an action is blocked for you, you're likely missing a permission — ask an ADMIN or PM to grant
 it. The permission matrix is also embedded in each user/team/project page.
+
+## Customers
+
+Invite outside customers as **CLIENT** accounts bound to specific projects — see
+[Customer accounts](./29-customer-accounts.md).
 
 ## Invitations — joining an org
 

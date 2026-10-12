@@ -1,8 +1,16 @@
 # Integrations & sync
 
 **Which tools can I connect?**
-GitHub, Jira, Backlog and Confluence. You connect a provider to your org/project and 4PM syncs
-work items **both ways**. See [docs/09](../docs/09-integrations.md).
+**GitHub** and **Jira** project sync (Backlog and Confluence project sync are marked *coming soon*).
+4PM syncs work items **both ways**. Integrations need the **Pro** plan or higher. See
+[docs/09](../docs/09-integrations.md).
+
+**How do I link Jira?**
+Sign in with Jira and pick the **exact Jira project** to link — one 4PM project to one Jira project.
+
+**Do I need a separate GitHub connection for issues?**
+Not if the project uses a **GitHub App** for git — issue sync can reuse it (give the App *Issues:
+read & write*).
 
 **How do I connect a provider?**
 Go to **Integrations** → **Connect**, authorize on the provider's consent screen, and 4PM stores

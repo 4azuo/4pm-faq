@@ -15,10 +15,11 @@ the sandbox. Direct is simplest for a personal/dev machine; Docker isolates the 
 host. See [docs/15](../docs/15-install-cli.md).
 
 **How do I run it in Docker (headless)?**
-Pull `ghcr.io/4azuo/4pm-cli:full`, pair once (`docker run … link`), sign in the AI CLI with
-`docker exec -it 4pm-cli 4pm ai-login` (plus `gh`/`glab auth login`), then run detached:
-`docker run -d --restart=unless-stopped --name 4pm-cli -e FOURPM_SERVER=… -v 4pm-home:/home/node/.4pm ghcr.io/4azuo/4pm-cli:full`.
-The `/cli` page's **Customize** button builds this line for you. Detail:
+Pull `ghcr.io/4azuo/4pm-cli:full`, pair once (`docker run … link`), run the worker detached
+(`docker run -d … ghcr.io/4azuo/4pm-cli:full` — copy the exact line from the `/cli` page, whose
+**Customize** button adds the hardening, limits and login mounts), then sign in the AI CLI with
+`docker exec -it 4pm-cli 4pm ai-login` (plus `gh`/`glab auth login`) unless you mounted your host's
+logins. Detail:
 [docs/15 — Docker](../docs/15-install-cli.md#option-2--docker-headless).
 
 **Can I use Podman instead of Docker?**
@@ -26,9 +27,10 @@ Yes. The `/cli` page has a **Docker | Podman** toggle — Podman is command-line
 same commands run with `podman` (on localhost it uses `host.containers.internal` instead of
 `host.docker.internal`). See [docs/15](../docs/15-install-cli.md#option-2--docker-headless).
 
-**What's the difference between the `full` and base images?**
-`:full` bundles the toolchain (`claude`/`codex`/`gh`/`glab`/`git`); `:latest` (base) is the CLI
-only, for when you bring your own tools.
+**What's the difference between the `full`, `full-locked` and `base` images?**
+`:full` bundles the toolchain (`claude`/`codex`/`gh`/`glab`/`git`); `:full-locked` is the same but the
+CLI never updates itself (upgrade by pulling a newer image); `:base` is the CLI only — install the AI
+CLIs from the Worker tools panel.
 
 **How do I sign in to Claude/Codex and GitHub inside the container?**
 `4pm ai-login` handles the AI CLI sign-in; `gh auth login` / `glab auth login` handle the git
@@ -40,9 +42,14 @@ Yes — attach a TUI to the running daemon: `docker exec -it 4pm-cli 4pm attach`
 when running directly). Detaching leaves the daemon running.
 
 **How do I update the CLI?**
-Installed via npm, it **auto-updates on startup**. In Docker, `docker pull` the newer tag and
-recreate the container — your pairing and cloned project live in the `4pm-home` volume, so nothing
-is lost.
+Installed via npm, it **auto-updates on startup** (or run `4pm update`). From the web, use **Update** on
+the machine-user or **Update all CLIs**. On the `full-locked` image, `docker pull` the newer tag and
+recreate the container — your pairing and cloned project live in the `4pm-home` volume, so nothing is
+lost.
+
+**"Permission denied" on the Docker volume.**
+The CLI runs as the non-root user `node` (uid 1000). A reused root-owned volume or host folder needs a
+one-time `sudo chown -R 1000:1000 <host-path>`.
 
 **I'm on Windows.**
 Run the CLI inside **WSL2 (Ubuntu)** — the AI toolchain expects a real Linux environment. Install
@@ -57,5 +64,6 @@ Yes — run several CLIs, each with its own **profile**: `4pm --profile a link �
 Open a new terminal so the updated `PATH` takes effect. If you installed the tarball, make sure its
 launcher directory is on `PATH`.
 
-See also: [Install & run the CLI](../docs/15-install-cli.md) ·
+See also: [Install & run the CLI](../docs/15-install-cli.md) · [CLI reference](../docs/20-cli-reference.md) ·
+[Recommended setup](../docs/22-recommended-setup.md) ·
 [Connect a worker](../docs/03-connect-a-worker.md) · [Worker tools](../docs/14-worker-tools.md).

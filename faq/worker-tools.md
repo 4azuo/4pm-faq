@@ -30,4 +30,21 @@ through npm/pnpm, so the panel shows their status and a short note on how to set
 Rented (4PM-hosted) workers are managed by the 4PM team, so the Worker tools panel isn't shown
 on your side. Contact support and mention which tool you need.
 
+**Do I have to install Claude/Codex and gh/glab myself?**
+Usually not. Workers install a missing GitHub CLI and GitLab CLI at start, and the Claude/Codex CLI their
+AI profiles use (at start and when an AI run needs it). The Tools tab shows an Install button if one is
+still missing.
+
+**A worker lost its tools after a restart or image update.**
+Tools are reinstalled automatically at their recorded versions. If some failed, click **Restore tools**
+— it lists any that failed and lets you re-run them.
+
+**How do I keep Claude Code / Codex up to date?**
+Click **Update** on the tool, or turn on its **auto-update** — it runs in the daily maintenance window
+when your org's daily CLI auto-update is on.
+
+**How do I give several workers the same tools?**
+**Machines › Tools**: pick a source machine-user and the targets, then **Apply** — targets install the
+same tools at the same versions.
+
 See also: [Worker tools](../docs/14-worker-tools.md).

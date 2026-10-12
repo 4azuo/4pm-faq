@@ -24,6 +24,14 @@ so you don't have to run anything yourself ([docs/11](../docs/11-rented-machines
 `gh`/`glab`, and `claude` — authenticated as needed. On **Windows**, run inside WSL2 (Ubuntu). Full
 install (npm, tarball, Docker headless): [docs/15](../docs/15-install-cli.md).
 
+**What should I read next?**
+- Setting up a worker properly: [Recommended setup](../docs/22-recommended-setup.md).
+- Letting the AI work on its own: [Autonomous mode](../docs/08-autonomous-mode.md) and
+  [Task books & approvals](../docs/28-task-books-and-approvals.md).
+- Working with a customer: [Customer accounts](../docs/29-customer-accounts.md).
+- Quality gates and automation: [Checklists](../docs/26-checklists.md) ·
+  [Automation rules](../docs/27-automation-rules.md).
+
 **Is there a free tier?**
 Yes — every organization starts on the **Free** plan. You can upgrade to Pro/Max any time
 ([docs/10](../docs/10-billing-and-plans.md)).

@@ -6,17 +6,28 @@ top up specific limits without changing plan.
 
 ## Plans
 
-4PM offers tiered plans, for example:
+| | Free | Pro | Max | Enterprise |
+| --- | --- | --- | --- | --- |
+| Price / month (annual = 10 months) | 0 | $20 | $100 | contact sales |
+| AI quota tokens / month | 2M | 20M | 100M | custom |
+| Users · projects | 5 · 1 | 20 · 3 | 100 · 10 | unlimited |
+| Parallel AI runs (org) | 2 | 10 | 30 | unlimited |
+| AI Help questions / user / day | 10 | 30 | 100 | unlimited |
+| Hosted storage | 1 GB | 10 GB | 100 GB | unlimited |
+| Data retention | 15 days | 90 days | 365 days | unlimited |
+| Memo items | 200 | 2 000 | 10 000 | unlimited |
+| New autonomous rows / book / month | 100 | 500 | 3 000 | unlimited |
+| Automation rules · rule runs / day | — | 50 · 500 | 100 · 5 000 | unlimited |
+| Teams, chat, worker pools, integrations, marketplace publishing, usage alerts, announcements | — | ✓ | ✓ | ✓ |
+| Community (4rum) | — | — | ✓ | ✓ |
+| SAML SSO, organization audit log | — | — | — | ✓ |
+| Rent 4PM machines · install from the Marketplace | ✓ | ✓ | ✓ | ✓ |
 
-| Plan | For |
-| --- | --- |
-| **Free** | Getting started; the plan every org begins on. |
-| **Pro** | Growing teams that need more quota and higher caps. |
-| **Max** | Heavier usage and larger teams. |
-| **Enterprise** | Custom terms (arranged with 4PM, not self-serve). |
+Prices exclude tax. **Quota tokens** are weighted by token type, so usage
+charts show both every token used and the quota tokens counted. Only an **ADMIN** can change the plan;
+the **Usage** tab shows how much of each limit you use.
 
-A plan determines your **quota** (AI usage) and your **caps** (users, projects, teams, storage,
-retention, etc.). Only an **ADMIN** can change the plan.
+After a downgrade, existing data stays readable and a notice shows which features are paused.
 
 ## Subscribe / checkout
 
@@ -64,8 +75,14 @@ example:
 - **Rented machine-user seats** — a pooled worker you don't have to run yourself (see
   [Rent a 4PM machine-user](./11-rented-machines.md)).
 
-You choose a **quantity** per add-on. One full period is charged up front; decreases or
-cancellations take effect at the end of the period. Add-ons stack on top of your plan's caps.
+You choose a **quantity** per add-on. Each add-on bills **monthly on its own cycle**: one period is
+charged up front; decreases or cancellations take effect at the end of the period, and you get reminders
+30, 10, 3 and 1 days before a renewal. Add-ons stack on top of your plan's caps. Buying one shows the
+terms that apply, which you confirm first.
+
+- **Free** orgs can rent machines too, paid from the credit balance.
+- **Cancelling** a paid plan keeps your rented machines running; extra storage and scale packs end with
+  the plan.
 
 ## Payment failure (dunning)
 
@@ -76,7 +93,8 @@ cancellations take effect at the end of the period. Add-ons stack on top of your
 
 ## Statements & history
 
-- The **statement** shows the current period's charges (plan + add-ons as line items).
+- The **statement** shows the current period's charges (plan + add-ons as line items), with a
+  **timeline** chart of past and upcoming payments.
 - The **payment history** lists every past period across both payment methods.
 
 ## Common questions

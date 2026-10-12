@@ -25,5 +25,13 @@ screen in real time, so you don't need to keep the page open.
 Things like a background job (project create/add) finishing, an approval you need to make, a
 support reply, a usage alert, or a billing/payment event.
 
+**Uploads, posts or AI runs are paused because storage is full.**
+Free space in **Organization Settings › Storage** (clear content by type and date, or turn on auto
+clear), or buy extra storage. ADMINs see a warning from 90%.
+
+**Where do I see my plan limits?**
+The **Usage** tab lists each plan limit (users, projects, storage, memo items, autonomous rows, rules…)
+with your current usage.
+
 See also: [Quotas, usage & notifications](../docs/17-quotas-and-notifications.md) ·
 [Run AI agents](../docs/06-running-ai-agents.md#quota--limits).

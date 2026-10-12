@@ -1,8 +1,15 @@
 # Integrations & sync
 
-4PM can connect to external SaaS tools — **GitHub, Jira, Backlog, Confluence** — and keep work
-items in sync **both ways**. You connect a provider to your org/project, 4PM mirrors its data,
-and changes flow in both directions.
+4PM can connect to external tools and keep work items in sync **both ways**. You connect a provider
+to your org/project, 4PM mirrors its data, and changes flow in both directions.
+
+| Provider | Project sync |
+| --- | --- |
+| **GitHub** (issues) | ✅ — can reuse the project's **GitHub App** (give it *Issues: read & write*), so no separate connection is needed. |
+| **Jira** | ✅ — sign in with Jira and pick the **exact Jira project**; one 4PM project links to one Jira project. |
+| **Backlog**, **Confluence** | Coming soon. |
+
+Integrations need the **Pro** plan or higher.
 
 ## Connect a provider
 
@@ -33,6 +40,13 @@ Updates arrive in real time as they happen on either side.
 If both sides changed the same item at the same time, **4PM's value is kept**. 4PM applies its
 own version to the provider and notifies you of the override (the provider's version is retained
 in the record for reference). This keeps your dashboard authoritative.
+
+## Where synced data shows up
+
+- The project's **Community** tab: **Issues**, **Tasks**, **Milestones** (and Pages) with a source badge.
+- The project's Content charts: a **delivery timeline / roadmap** of milestones, **burndown, burnup and
+  cumulative-flow** charts, and a **Gantt** chart of items with start/due dates (with dependency arrows
+  for blocking Jira issues).
 
 ## Reliability
 

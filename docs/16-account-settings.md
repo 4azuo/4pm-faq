@@ -38,6 +38,33 @@ While a change is pending you'll see the pending request and a **Cancel** button
 If you registered via SSO and have no password, you can add one here so you also have a
 password login.
 
+## Two-factor authentication & passkeys
+
+In the **Security** panel you can set up an **authenticator app**, register **passkeys**, and view or
+regenerate your **recovery codes** (regenerating or removing a factor asks for your password). You can't
+remove your last factor while your organization requires 2FA. See
+[Accounts & login](./02-accounts-and-login.md#two-factor-authentication-2fa).
+
+## Idle screen lock & unlock PIN
+
+After a period of inactivity set by your ADMIN for the whole organization, the app **locks**: your work
+is hidden behind a lock screen and the session can't be used until you unlock it with your **password**
+or an optional **PIN** (4–12 digits). Set or remove the PIN in the **Security** panel.
+
+## Display preferences
+
+From the settings menu you can choose the **language** (English, Tiếng Việt, 日本語, 中文), the
+**appearance** (light / dark / system) and the **theme** (Default, Flat, 8-bit). Every table also has a
+settings gear to remember its rows per page, sort and filters.
+
+## Finding things quickly
+
+- **Global search** (header): projects, teams, people, issues, tasks, milestones, docs, Messenger
+  channels, chats and 4rum posts in one box.
+- **Pin** projects and teams to keep them at the top of your Overview; recently opened projects are listed
+  too.
+- **What's new** (footer) lists the latest changes and what's coming soon.
+
 ## IP allowlist
 
 Your account can be restricted to certain IPs. Only an **ADMIN** (or a manager of your account)

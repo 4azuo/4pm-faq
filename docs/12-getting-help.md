@@ -16,6 +16,9 @@ How it works:
    the relevant doc/FAQ where useful.
 3. The answer **streams back** into the chat as it's written.
 
+You can paste or attach **screenshots and files** so the assistant can see what you see. The number of
+Help questions per user per day depends on your plan (Free 10, Pro 30, Max 100).
+
 The Help chat is for **product usage** questions ("how do I use 4PM"). It answers from the
 official documentation and won't expose admin-only features to non-admin users.
 
@@ -26,6 +29,11 @@ official documentation and won't expose admin-only features to non-admin users.
 - You can also click **"email a human"** at any time to hand the conversation to human support.
 - If no AI agent is available at that moment, you'll see a "temporarily unavailable — email
   support" message.
+
+## Support without signing in
+
+The footer's **Support** option works without an account: send your question with your email and the
+team replies by email (protected by a quick verification step).
 
 ## Human email support
 

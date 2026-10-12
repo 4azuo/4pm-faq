@@ -52,3 +52,15 @@ machines area (`/machines`).
 **Do I need my own worker at all?**
 No — you can **rent** a 4PM-operated machine-user instead
 ([docs/11](../docs/11-rented-machines.md)).
+
+**My worker's CLI version is shown in red or amber.**
+Amber = a newer CLI is available. Red = too old: the server will refuse it the next time it connects —
+update it (`4pm update`, the **Update** button, or pull a newer Docker image).
+
+**A machine shows "Not provisioned".**
+It was attached to a project but couldn't clone the repo — usually git authentication. Fix it in the
+project's **Git › Configuration**, then **Retry**.
+
+**How do I update every worker at once?**
+**Machines › Machine users › Update all CLIs**. Workers in autonomous mode, rented workers and
+locked-image workers are skipped and named.

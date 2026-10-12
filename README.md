@@ -27,13 +27,29 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [marketplace & knowledge](./docs/13-marketplace.md) · [worker tools](./docs/14-worker-tools.md) ·
 [install & run the CLI](./docs/15-install-cli.md) · [account & settings](./docs/16-account-settings.md) ·
 [quotas & notifications](./docs/17-quotas-and-notifications.md) ·
-[teams & permissions](./docs/18-teams-and-permissions.md) · [community (4rum)](./docs/19-community.md).
+[teams & permissions](./docs/18-teams-and-permissions.md) · [community (4rum)](./docs/19-community.md) ·
+[CLI reference](./docs/20-cli-reference.md) · [worker configuration](./docs/21-worker-config.md) ·
+[recommended setup](./docs/22-recommended-setup.md) · [git authentication](./docs/23-git-authentication.md) ·
+[worker pools & AI routing](./docs/24-worker-pools-and-routing.md) ·
+[project content](./docs/25-project-content.md) · [checklists](./docs/26-checklists.md) ·
+[automation rules](./docs/27-automation-rules.md) ·
+[task books & approvals](./docs/28-task-books-and-approvals.md) ·
+[customer accounts](./docs/29-customer-accounts.md) ·
+[generators & doc types](./docs/30-generators-and-doc-types.md) ·
+[research, announcements & chat](./docs/31-research-announcements-and-chat.md) ·
+[public API](./docs/32-public-api.md) · [organization settings](./docs/33-organization-settings.md) ·
+[project settings](./docs/34-project-settings.md).
 
 **FAQ** (quick Q&A): [getting-started](./faq/getting-started.md) ·
 [account & login](./faq/account-and-login.md) · [workers & pairing](./faq/workers-and-pairing.md) ·
-[installing the CLI](./faq/install-cli.md) · [account settings](./faq/account-settings.md) ·
+[installing the CLI](./faq/install-cli.md) · [CLI & worker config](./faq/cli-and-worker-config.md) ·
+[worker pools & routing](./faq/worker-pools-and-routing.md) · [account settings](./faq/account-settings.md) ·
 [projects](./faq/projects.md) · [AI commands](./faq/ai-commands.md) ·
 [git operations](./faq/git-operations.md) · [autonomous mode](./faq/autonomous-mode.md) ·
+[task books & approvals](./faq/task-books-and-approvals.md) · [customer accounts](./faq/customer-accounts.md) ·
+[checklists](./faq/checklists.md) · [automation rules](./faq/automation-rules.md) ·
+[project content](./faq/project-content.md) · [generators](./faq/generators.md) ·
+[settings](./faq/settings.md) ·
 [integrations](./faq/integrations.md) · [billing](./faq/billing.md) ·
 [rented machines](./faq/rented-machines.md) · [marketplace & knowledge](./faq/marketplace.md) ·
 [worker tools](./faq/worker-tools.md) · [quotas & notifications](./faq/quotas-and-notifications.md) ·

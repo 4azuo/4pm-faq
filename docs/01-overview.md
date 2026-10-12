@@ -16,7 +16,12 @@ billing from one screen.**
   AI-assisted spec, then let agents build.
 - **Do Git from the dashboard** — browse branches, commit, push, open PRs and resolve conflicts
   without leaving the web app.
-- **Run autonomously** — let a project work on a schedule (auto-cycle) while you approve tasks.
+- **Run autonomously** — let a project turn approved requests into tasks and deliver each as a pull
+  request on a schedule, while people approve every step.
+- **Govern the work** — checklists that gate actions, multi-party approvals, discussions, and automation
+  rules that react to events.
+- **Work with your customer** — invite customers into their projects to post requests, answer questions
+  and approve work.
 - **Integrate your tools** — connect GitHub, Jira, Backlog or Confluence and sync work items
   two ways.
 - **Reuse building blocks** — install skills & subagents from the **marketplace** (or publish your
@@ -32,7 +37,10 @@ billing from one screen.**
 | **Machine-user** | A special user that represents a paired worker CLI. You attach it to a project so AI can run there. |
 | **Worker** | A physical/virtual machine you control. It runs the `4pm` CLI and the actual AI/Git commands. |
 | **CLI** | The `4pm` command-line app installed on a worker. One machine can run several CLIs in parallel; each serves one project. |
-| **Project** | A unit of work: a repo (or repos) plus a spec, served by a machine-user's CLI on a worker. |
+| **Project** | A unit of work: one repo (plus submodules) and a spec, served by a machine-user's CLI on a worker. |
+| **Worker pool** | A named group of machine-users that a project's AI routing can use, with failover. |
+| **Task books** | The project's request / question / task tables that drive autonomous mode; every row is approved by people. |
+| **Customer (CLIENT)** | An outside customer account invited to specific projects. |
 | **Dashboard** | The web app where you monitor and drive everything. |
 
 ## How the pieces fit together
@@ -55,3 +63,6 @@ You (browser)  ──▶  4PM dashboard  ──▶  server  ──▶  your work
   [Connect a worker](./03-connect-a-worker.md).
 - Ready to build? See [Create & manage projects](./05-projects.md) and
   [Run AI agents](./06-running-ai-agents.md).
+- Setting up workers for real use? See [Recommended setup](./22-recommended-setup.md).
+- Letting the AI work on its own? See [Autonomous mode](./08-autonomous-mode.md) and
+  [Task books & approvals](./28-task-books-and-approvals.md).

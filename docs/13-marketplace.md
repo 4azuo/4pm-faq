@@ -1,7 +1,8 @@
 # Marketplace & knowledge hub
 
-4PM has a built-in **marketplace** for reusable agent building blocks — **skills** and
-**subagents** (and `CLAUDE.md` packs) — and a **knowledge hub** for sharing write-ups. You can
+4PM has a built-in **marketplace** for reusable agent building blocks — **skills**, **subagents**,
+**Claude commands**, **hooks**, **scripts**, **VS Code tasks**, **guides** (CLAUDE.md / AGENT.md packs)
+and **bundles** of these — and a **knowledge hub** for sharing write-ups. You can
 install what others have published, and publish your own, so your team stops reinventing the same
 prompts and configs on every project.
 
@@ -9,10 +10,23 @@ prompts and configs on every project.
 
 Open **Marketplace** from the app to browse, install and manage packages.
 
+### Official packages
+
+Packages published by 4PM carry an **Official** badge; use the **Official only** filter to see just
+those.
+
 ### Install a package
 
 - **Search** the catalog and **Install** a package into a project or your org. Installed packages
   are listed under **Installed packages** with their version.
+- **Claude and/or Codex:** for skills, subagents and hooks, choose which AI to install for. You're warned
+  when the project's worker has no profile for that AI.
+- **Dependencies:** installing a package also installs what it requires; removing one that others still
+  need asks first.
+- **Hooks are reviewed:** every hook command is shown and must be confirmed before install. Hooks from
+  other organizations stay off unless an ADMIN allows them in Settings.
+- **Guide packages:** **Adapt with AI** rewrites your CLAUDE.md or AGENT.md to fit your project and shows
+  the changes for you to edit and accept.
 - **Auto-update** — turn on "Auto-update packages to the latest approved version" to keep installs
   current, or update each one manually when an **Update to v{version}** badge appears.
 - **Locally edited** ("drift") — if a package was changed on the worker after install, it's flagged
@@ -22,12 +36,13 @@ Open **Marketplace** from the app to browse, install and manage packages.
 ### Publish a package
 
 1. Prepare your package as a **zip** and click **Publish a package**.
-2. Choose a **kind** (Skill or Subagent) and a **scope**:
+2. Choose a **kind** (Skill, Subagent, Command, Hook, Script, VS Code task, Guide…) and a **scope**:
    - **Personal** — only you.
    - **Organization** — everyone in your org.
    - **Global (public)** — visible across all orgs **after** your org's ADMIN/PM approve the
      version (see moderation below).
-3. Publish. Each publish creates a **version**; you can **Yank** a bad version (existing installs
+3. Publish. You can also publish several subagents, skills and commands of a project as one
+   **bundle**. Publishing needs the Pro plan or higher. Each publish creates a **version**; you can **Yank** a bad version (existing installs
    keep working) or **Unpublish** the package (installed copies stay on workers).
 
 ### Moderation (going public)
@@ -54,6 +69,8 @@ The **Knowledge** area is a lightweight place to share distilled know-how as **M
 - Write a post with a **title**, optional **summary**, **category** and **tags**.
 - Choose a **scope** (Personal / Organization / Global public). Global posts are **reviewed by your
   org's admins** before they go public.
+- **Share as knowledge** from a project (its action bar / Market tab): the AI distils the project's
+  know-how into a draft post, which opens in the Knowledge editor for you to review and publish.
 - Browse and **search** posts, sort by **newest / most viewed / top rated**, and leave
   **reviews/ratings**.
 

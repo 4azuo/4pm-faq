@@ -18,7 +18,8 @@ renting, since the work runs on 4PM's account rather than your own.
 
 1. In **/billing**, open the **rentable machines** list. It shows available pooled machines as
    `{ label, region }`.
-2. **Filter by region** if you care where it runs, and **pick a machine**.
+2. **Filter by region** if you care where it runs, and **pick a machine**. The **Mode** column says whether
+   the machine has its own AI account (**Exclusive**) or shares one with other machines (**Shared**).
 3. Confirm — this buys **1 unit of the machine-user add-on** bound to that machine. Once it
    activates, the machine-user is **bound to your org**.
 
@@ -32,7 +33,12 @@ available" message and you aren't charged.
   in /billing.
 - Attach it to a project and use it exactly like your own machine-user — dispatch AI, Git, etc.
 - **AI usage meters to your org** and counts against your quota, same as any machine-user.
-- Its user detail view is read-only and rental-scoped: **Info · Usage · Console · Logs · History**.
+- Its user detail view is read-only and rental-scoped: **Info · Usage · Console · Logs · History**, plus
+  read-only **Documents** and **Tools** views. Its AI accounts are shown only as "AI account #N".
+- Its CLI and tools are kept up to date by 4PM (your **Update** actions skip rented workers).
+- You can put it in your worker pools and project routing while you rent it.
+- **Private repos:** use a GitHub App or GitLab credential on the project, or generate an **SSH deploy
+  key** on the rented worker's page and add its public key as a Deploy Key on your repo.
 
 ## Isolation & privacy
 

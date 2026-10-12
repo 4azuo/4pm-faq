@@ -21,6 +21,27 @@ modal) or use `/expand [N]` in the CLI. Prose answers are shown as-is.
 The prompt exceeded the project's per-prompt token limit, so it wasn't run. Shorten the prompt or
 raise the limit.
 
+**"Waiting for an AI run slot — N ahead".**
+Your org is at its plan's limit of parallel AI runs (Free 2, Pro 10, Max 30). The run starts
+automatically; you can also stop it.
+
+**My AI run stopped with a time-limit error.**
+Single AI runs stop after the AI run time limit (300 s by default). Raise it in the project Settings or
+the worker config.
+
+**The AI says the session expired / out of credits.**
+The worker's AI account is signed out or exhausted; it fails over to the next AI profile if there is
+one. Sign the account in again with `4pm ai-login`, or add another profile — see
+[worker configuration](../docs/21-worker-config.md).
+
+**Can I attach screenshots or files to a prompt?**
+Yes — 📎, paste or drag-and-drop (up to 10 files of 10 MB). Each becomes an `[Image#N]` / `[File#N]`
+label the AI can see.
+
+**Can I run `4pm` slash commands from the web?**
+Yes — type `/` then Tab in the Console. `/quit` and `/config` are blocked from the web by default. See
+the [CLI reference](../docs/20-cli-reference.md).
+
 **My command was refused for quota.**
 AI usage is metered to your org and counts against your **plan's quota**. Upgrade your plan or buy
 a scale-pack add-on ([docs/10](../docs/10-billing-and-plans.md)).

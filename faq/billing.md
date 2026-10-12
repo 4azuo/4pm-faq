@@ -6,7 +6,18 @@ Per **organization**. You pick a plan (Free / Pro / Max / Enterprise), pay by **
 [docs/10](../docs/10-billing-and-plans.md).
 
 **What plan do I start on?**
-Every org starts on **Free**. Only an **ADMIN** can change the plan.
+Every org starts on **Free** (2M quota tokens a month). Only an **ADMIN** can change the plan.
+
+**What do the plans include?**
+Free / Pro ($20/mo) / Max ($100/mo) / Enterprise (custom); annual = 10 months. They differ in quota
+tokens (2M / 20M / 100M a month), users, projects, parallel AI runs (2 / 10 / 30), AI Help per day,
+storage, retention, autonomous rows, automation rules, and features such as teams, chat, 4rum, worker
+pools, integrations, marketplace publishing and usage alerts. Prices exclude tax. See the plan table
+in [docs/10](../docs/10-billing-and-plans.md#plans) or the pricing page.
+
+**A feature says "not available on your plan".**
+It needs a higher plan (see the table). After a downgrade your existing data stays readable, and a
+notice shows what's paused.
 
 **How do I upgrade?**
 In **/billing**, pick the plan and provider and complete checkout. You can also pick a plan at
@@ -33,7 +44,9 @@ Upgrade your plan or buy a **scale-pack** add-on. Quota regenerates when the cha
 
 **What add-ons are there?**
 Extra **storage**, **scale packs** (add users/projects/storage), and **rented machine-user**
-seats. You pick a quantity; one full period is charged up front and decreases apply at period end.
+seats. Each add-on bills **monthly on its own cycle**; you pick a quantity, one period is charged up
+front and decreases apply at period end. You get reminders before an add-on renews. Free orgs can rent
+machines too, paid from the credit balance.
 
 **What happens if a payment fails?**
 Your subscription goes **past due** but quota is **preserved for a grace period** (about a week by

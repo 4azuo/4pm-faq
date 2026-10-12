@@ -21,4 +21,11 @@ Start with the in-app **Help** chat for instant answers about using 4PM; if it c
 confidently it suggests escalating, and you can hand off to human support at any time (your
 transcript comes along). See [docs/12](../docs/12-getting-help.md).
 
+**Can I contact support without an account?**
+Yes — use **Support** in the footer: send your question with your email and the team replies by email
+(after a quick verification step).
+
+**Is there a limit on AI Help questions?**
+Yes, per user per day by plan: Free 10, Pro 30, Max 100.
+
 See also: [Get help & support](../docs/12-getting-help.md).

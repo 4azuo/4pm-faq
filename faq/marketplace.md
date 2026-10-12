@@ -1,13 +1,26 @@
 # Marketplace & knowledge hub — FAQ
 
 **What's in the marketplace?**
-Reusable **skills** and **subagents** (and `CLAUDE.md` packs) you can install into projects/orgs,
-plus a **knowledge hub** of shared Markdown write-ups. See
+Reusable **skills**, **subagents**, **Claude commands**, **hooks**, **scripts**, **VS Code tasks**,
+**guides** (CLAUDE.md / AGENT.md) and **bundles**, including **Official** 4PM packages, plus a
+**knowledge hub** of shared Markdown write-ups. See
 [Marketplace & knowledge hub](../docs/13-marketplace.md).
 
 **How do I install a package?**
 Open **Marketplace**, search, and click **Install**. Installed packages appear under **Installed
 packages**; turn on **Auto-update** to track the latest approved version.
+
+**Can I install a package for Codex instead of Claude?**
+Yes — for skills, subagents and hooks, choose Claude and/or Codex when installing. You're warned if the
+project's worker has no profile for that AI.
+
+**Why must I confirm each hook command?**
+Hooks run commands on the worker, so every hook command is shown for review before install. Hooks from
+other organizations stay off unless an ADMIN allows them in Settings.
+
+**What does "Adapt with AI" do on a guide package?**
+The AI rewrites your project's CLAUDE.md or AGENT.md to fit the project and shows the changes for you
+to edit and accept.
 
 **How do I publish my own?**
 Zip your package, click **Publish a package**, pick a **kind** (Skill/Subagent) and **scope**

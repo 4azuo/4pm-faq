@@ -33,3 +33,12 @@ Yes. 4PM isolates rented machine-users between renters. When a rental ends the w
 Reduce or cancel the add-on (a payment lapse also releases it). Release happens at **period end**:
 the machine detaches, its workspace is scrubbed, and it returns to the pool. Your **rental
 history** keeps a read-only record of what you rented and when.
+
+**What do "Exclusive" and "Shared" mean when choosing a machine?**
+Exclusive machines have their own AI account; Shared machines share one with other machines.
+
+**Why do I see "AI account #1" instead of account names?**
+Rented workers hide the 4PM-operated AI account labels.
+
+**Can I use a rented machine in my worker pools?**
+Yes, while you rent it; it leaves your pools and routing when the rental ends.

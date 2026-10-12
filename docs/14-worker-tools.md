@@ -22,6 +22,15 @@ shelling into the machine**.
 
 Each row shows whether the tool is **installed** and its **version**, or **not installed**.
 
+## Automatic install
+
+Workers install what they need on their own: a missing **GitHub CLI** and **GitLab CLI** when the CLI
+starts, and the **Claude / Codex CLI** that the worker's AI profiles use — at start and whenever an AI run
+needs it. (An operator can turn this off in the worker config; then use the Install buttons.)
+
+The list of installed tools is remembered: after a worker restarts or its image is updated, its tools are
+reinstalled at their recorded versions. **Restore tools** re-runs that and lists any that failed.
+
 ## Installing & removing tools
 
 - Tools distributed as packages — **pnpm**, **claude**, **codex**, and any other package you
@@ -34,6 +43,19 @@ Each row shows whether the tool is **installed** and its **version**, or **not i
   machine (or the operating system), so the panel shows their status with a short setup note
   rather than an install button — they aren't installed or removed through the package
   managers.
+
+## Updating tools
+
+- **Update** brings Claude Code, Codex, pnpm or an installed package to the latest version (after a
+  confirmation). **Refresh** re-checks versions; "Last checked" shows when.
+- **Auto-update** per tool updates it automatically in the daily maintenance window — this needs the
+  organization's daily CLI auto-update to be on.
+
+## Copying tools to other machines
+
+**Machines › Tools** (ADMIN/PM): pick a **source** machine-user, preview its tools, tick **target**
+machine-users and **Apply** — the targets install the same tools at the same versions (offline ones on
+their next connect), with live progress per target.
 
 ## Watching progress
 

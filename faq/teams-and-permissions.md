@@ -14,8 +14,18 @@ Resolution is **project → team → user** (more specific wins). See
 [docs/18](../docs/18-teams-and-permissions.md#permissions).
 
 **Who can set permissions?**
-**ADMIN** can set grants for users, teams and projects; **PM** for projects only; other roles view
-the catalog read-only. The **root** user isn't editable and isn't listed.
+**ADMIN** can set grants for users, teams and projects; **PM** for projects only — including granting
+one permission to a single member of their project; other roles view the catalog read-only. The
+**root** user isn't editable and isn't listed. Each permission explains which screens and actions it
+unlocks.
+
+**Why can't I grant this permission to a worker or customer?**
+Worker (machine) and customer (CLIENT) accounts have fixed permission caps; their Permissions tab lists
+only what applies, and no grant can widen them.
+
+**How do I add a customer?**
+Invite them as a **CLIENT** from the project's Members tab — see
+[customer accounts](./customer-accounts.md).
 
 **Why is an action blocked for me?**
 You're probably missing a permission for it — ask an ADMIN or PM to grant it. The permission matrix

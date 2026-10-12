@@ -30,5 +30,17 @@ it — a regular user can't change their own. Ask an ADMIN.
 Yes — an ADMIN can reset another user's password directly (which logs that user out). ADMINs can't
 reset the root user's or their own this way; they use the Security section.
 
+**How do I turn on two-factor authentication?**
+Profile › **Security**: set up an authenticator app or register a passkey, and save the recovery codes.
+See [docs/02](../docs/02-accounts-and-login.md#two-factor-authentication-2fa).
+
+**Why did the app lock itself?**
+Your organization locks idle sessions after a set time. Unlock with your password or your **PIN**
+(4–12 digits, set in your profile's Security panel).
+
+**How do I change the language or switch to dark mode?**
+Open the settings menu: language (English, Tiếng Việt, 日本語, 中文), appearance (light / dark / system)
+and theme (Default, Flat, 8-bit).
+
 See also: [Accounts & login](../docs/02-accounts-and-login.md) ·
 [Account settings](../docs/16-account-settings.md).

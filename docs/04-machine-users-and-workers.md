@@ -13,6 +13,11 @@ easier.
   to a project; permissions and quota apply to it like any other user (it holds the **MACHINE**
   role).
 
+> **Orchestrator CLI.** A root/ADMIN can also pair a CLI to **their own account** (leave the
+> machine-user empty when pairing). That *orchestrator* CLI doesn't serve a project; it identifies the
+> machine and can run short AI requests outside a project (such as spec suggest/review). Its connection
+> shows in Settings and in the Machines list.
+
 The relationship is **1:1:1** — one CLI ↔ one machine-user ↔ one project's working copy on the
 worker.
 
@@ -40,6 +45,34 @@ Worker (one machine)
   connected/serving, or offline.
 - Each machine-user has a detail view with **Info · Usage · Console · Logs · History**.
 - If project creation says there's **no idle machine-user**, pair a new CLI or free one up first.
+- The **Machine users** list shows each worker's **CLI version** (amber = update available, red = too old
+  to connect), the **AI accounts** it uses, the pools it belongs to, and its last error. **Update all
+  CLIs** updates every online worker that's behind (skipping autonomous, rented and locked-image
+  workers).
+- **Machines** also has **Workers**, **Pools** ([Worker pools & AI routing](./24-worker-pools-and-routing.md)),
+  **Links**, **Configs** ([Worker configuration](./21-worker-config.md)) and **Tools** (copy tools between
+  machines).
+- A worker's page shows live **metrics** (CPU, memory, disk, IO pressure, swap, OOM, processes).
+
+## A machine-user's page
+
+Besides **Info · Usage · Console · Commands · Memory · Tools · Logs · History**, managers (and the worker
+account itself) can set, per machine-user:
+
+- **Worker configs** — the CLI's config (see [Worker configuration](./21-worker-config.md));
+- **Usage limits** — a quota-token and command limit per period across all its connections (0 = no
+  limit);
+- **Usage alerts** — email a designated address when its AI usage crosses a threshold;
+- **Data retention** — how many days the CLI keeps its logs, command history and output (capped by your
+  plan);
+- **Worker network** — the worker's observed network posture (outbound open or restricted, inbound).
+  4PM only observes it; sandbox the host or container yourself (or use project
+  [Networks](./25-project-content.md#networks) rules);
+- **SSH deploy key** (rented workers) — generate a key on the worker and add its public key as a Deploy Key
+  on your repo, for private repos without a GitHub App / GitLab credential;
+- **Language** of the worker's messages, and the sign-in **IP allowlist**.
+
+A worker account's role is fixed (MACHINE) and can't be given management permissions.
 
 ## Status you'll see
 
@@ -49,6 +82,7 @@ Worker (one machine)
 | **connected / serving** | Actively attached to a project and available for commands. |
 | **busy** | Currently running a command. |
 | **offline** | The CLI isn't connected (worker off, network down, or CLI stopped). |
+| **not provisioned** | Attached to a project, but the repo couldn't be cloned (often git authentication) — fix it and **Retry**. |
 
 ## Usage & metering
 
