@@ -61,6 +61,23 @@ update it (`4pm update`, the **Update** button, or pull a newer Docker image).
 It was attached to a project but couldn't clone the repo — usually git authentication. Fix it in the
 project's **Git › Configuration**, then **Retry**.
 
+**How do I restart a worker?**
+Machines › Machine users › **Restart** on its row. The CLI restarts once its running job finishes, so no
+work is lost; a **Restarting** tag shows next to its CLI version meanwhile, and new commands are told to
+resend later.
+
+**How do I stop a worker's autonomous mode before updating it?**
+Use **Stop / Start autonomous** on its row in Machine users — no need to open the project.
+
+**Which workers are running AI right now, on which account?**
+A live **Running / Idle** status shows on the user page, the project header, the Console and the autonomous
+Workers table (AI profile column); Machine users marks the AI account in use.
+
+**How are AI accounts shared between workers?**
+AI runs spread over the AI accounts your workers share: an idle account is used first, and an account that
+reaches its usage limit is skipped by every worker until it resets. AI Help, Research, checklist drafting
+and shared memory fail over between accounts too (including Codex and API-key accounts).
+
 **How do I update every worker at once?**
 **Machines › Machine users › Update all CLIs**. Workers in autonomous mode, rented workers and
 locked-image workers are skipped and named.

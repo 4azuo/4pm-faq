@@ -30,15 +30,31 @@ instructions.
 - **Files** — the repository as a folder tree (you can't go above the project folder): view and edit
   files, new file/folder, rename, delete, drag-and-drop move, **upload** (or paste from the clipboard),
   **download**. Images preview; **Show diff** compares before/after the AI's changes, images included.
-- **Graph** — a 3D dependency graph of the docs and code (red = orphan nodes), with a path filter.
-- **RAG** — set up retrieval for the project.
+- **Graph** — the docs and code as a **graph** or a **tree**, filtered by kind, status and feature, with a
+  feature search. A **structure score** (1–100) flags docs nested too deep, orphans, broken links and
+  unclassified docs (click a number to filter). **AI review** (Pro and higher) proposes structural moves.
+- **RAG** — semantic search over the repo's documents: one result per file (other matches expand), **Ask
+  AI** (Pro and higher) to get the documents to read in order, and **Settings** (index status, Reindex,
+  minimum score, max results, model). The worker needs no Python. **Open in Docs & AI** jumps to a file.
 - **Reports** and **Tests**.
 - **ER** — the project's approved **data model** by module: find an entity and focus on it with its
   neighbours, pan/zoom, or see the whole model in 3D. **Propose a change** (it becomes a change request),
   then approve or reject it, compare versions and restore an older one. Autonomous intake can propose ER
-  changes too, and a task waits until its group's ER change is approved.
+  changes too, and a task waits until its group's ER change is approved (unless *Auto-approve ER changes*
+  is on). **AI draft** (Pro and higher) drafts the model from the schema in your code.
+- **Diagram** — the **system diagram**: the system's apps, services, stores, queues and external systems
+  and how they connect, in a built-in **draw.io** editor (shapes from the "4PM components" library). Stored
+  in the repo with change requests, approval and version history. Start it by drawing, by an **AI draft**
+  from the code, or let intake propose changes. Changes apply at once by default (*Auto-approve
+  system-diagram changes*); with it off, the group's tasks wait (*Diagram pending*).
 - **Discussions** — questions between people (members and the customer) — see
   [Task books & approvals](./28-task-books-and-approvals.md#discussions).
+
+Saving, uploading, moving or deleting in Files, Reports, Tests, Subagents, Skills and CLAUDE.md commits
+straight to the base branch (you're warned if the file changed since you opened it). The **AI request**
+button there sends a change about the open file — as a User Todo request when the project sends every change
+through autonomous, or as a direct AI run otherwise. Docs & AI, Reports and Tests show where files are read
+from (e.g. `origin/main @ a1b2c3d`).
 
 ## Git
 
@@ -52,7 +68,7 @@ Branches, commits, diffs, pull requests and the project's git configuration — 
 | **AI Guide** | The project's single guide file for the AI — `CLAUDE.md` or `AGENT.md` (chosen in the spec). View/edit it, or **Generate** it from the spec (optionally improving the current content). |
 | **User Todo · User Q&A · AI Todo · AI Done** | The task books — see [Task books & approvals](./28-task-books-and-approvals.md). |
 | **Autonomous** | Start/pause and settings — see [Autonomous mode](./08-autonomous-mode.md). |
-| **Evidences** | Every mockup, sequence diagram, ER change and book attachment, grouped by task group and filterable by type. |
+| **Evidences** | Every mockup, sequence diagram, ER / system-diagram change and book attachment, grouped by request with its task status and last change. Mockups and sequences have a **History** (view, compare, restore). The **Guide** tells the AI how evidences should look — regenerate all of it or one section from a description. |
 | **Agents · Skills** | The project's AI subagents and skills: edit them, generate them with AI, choose a model per subagent. Install more from the [Marketplace](./13-marketplace.md). |
 | **Agent tools** | Which tools the AI may use: **Allow** and **Deny** lists — shared for the project (committed), or a local override per machine-user (not committed). |
 | **AI Placeholder** & **secret values** | Placeholder keys the project uses, and their values — **write-only** (set or rotate, never shown back), stored on the worker and **never committed**. Use test values only. |

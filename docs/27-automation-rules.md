@@ -52,11 +52,20 @@ a run slot and quota. More triggers and actions are listed as **coming soon** in
 
 Rules can **never** merge a PR, approve a book row or delete a branch — those stay human.
 
+## Chained rules & the Board
+
+- A rule can follow another: trigger **Another rule finished**, pick the source rule and which results start
+  it (succeeded, partial, failed). It can use the source rule's AI output and the original event.
+- A link that would make a loop, or a chain of more than **5** rules, is refused. A rule that other rules
+  follow can't be deleted. Each run shows which rule's run started it.
+- Rules › **Board** shows the rules as lanes — each chain from its trigger, then standalone rules — coloured
+  by their last run. Click a rule to see it, or **+** to add a follow-up rule.
+
 ## The editor, dry run & run log
 
 - The editor walks you through trigger → conditions → actions (triggers and actions are grouped by
   category) and lists exactly what to fix, on which step, when you save.
-- **Dry run** shows what the rule *would* do for an event, with no side effects.
+- **Dry run** shows what the rule *would* do for an event, with no side effects, and which rules would follow.
 - The **Runs** log shows each run: queued, running, succeeded, partial, failed or skipped (with the
   reason), per-action results, and **Retry** for failed actions.
 - Runs are kept 30 days by default (org setting).

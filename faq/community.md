@@ -28,4 +28,15 @@ them first (Pending queue). For curated write-ups, use the **Knowledge hub** (se
 In a project's Community tab › **Messenger**, or the **Chat** tab on the right edge of every page
 (Pro plan and above). See [docs/31](../docs/31-research-announcements-and-chat.md).
 
+**How do I read one organization's Global posts?**
+In the **Global** tab, search an organization to see only its posts, and **pin** the organizations you
+follow.
+
+**A post shows "Blocked from Global".**
+4PM removed it from the Global feed; the badge gives the reason. Your organization still sees it.
+
+**Long threads load only some comments.**
+The newest comments show first — use **View older comments** to load more, and **View more replies** under a
+comment for replies beyond the first two.
+
 See also: [Community (4rum)](../docs/19-community.md).

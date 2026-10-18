@@ -67,13 +67,40 @@ available), the operation is blocked and the PM is notified.
 
 ## Resolving merge conflicts
 
-When a merge hits conflicts, resolve them from the Git tab by **editing the conflicted files directly**
-and then committing the resolution.
+When a merge hits conflicts, the conflicted files are marked **Conflict** in the Git tab: **Edit** one and
+**Save & stage**, or press **Resolve with AI**, then commit the resolution.
+
+## Pull requests
+
+Git › **Pull requests** is a table with state and "only this branch" filters and a button to open each PR on
+GitHub / GitLab. A PR the host reports as conflicting is marked **Conflicts**: **Resolve with AI** lets the
+AI resolve it on the worker and push the fix (the badge clears once it's pushed; failures are sent to the
+managers). For a branch 4PM didn't create you confirm first. Autonomous can do this by itself with *AI
+resolves conflicting PRs*.
+
+## Branch cleanup
+
+Git › **Branch cleanup** has two views:
+
+- **Candidates** — branches that look dead: **Merged**, **PR closed**, **Task gone** (4PM task branches whose
+  task no longer exists) or **Stale** (no commit for 30 days), with the last commit, PR and the workers that
+  hold a local copy. 4PM task branches (except merely stale ones) are pre-selected; others never are.
+  **Delete** removes them on the remote and on the workers (a worker copy with unpushed commits is kept).
+  Never listed: the base, the books branch, branches with an open PR, a running or pending task's work, and
+  checked-out branches.
+- **Deleted** — the log of deleted branches with who and when; **Restore** works while the commit still
+  exists on the host or a worker.
+
+An ADMIN / PM can turn on **Daily branch cleanup** in the autonomous settings: once a day it deletes 4PM task
+branches that are merged, whose PR is closed or whose task is gone, after N days without a commit (14 by
+default). Other branches are never deleted automatically.
 
 ## Branches created by 4PM
 
 - The **base branch** you declared receives the scaffold at creation.
-- Autonomous tasks use `dev/<base>/<group>/<task>` branches and open PRs into the base branch.
+- Autonomous tasks use `dev/<base>/<group>/<task>` branches and open PRs into the base branch (or merge
+  directly when *Merge without a pull request* is on).
+- Saving files from the web's file screens commits straight to the base branch.
 - The task books live on `autonomous-books/<base>` — don't protect it. See
   [Autonomous mode](./08-autonomous-mode.md).
 

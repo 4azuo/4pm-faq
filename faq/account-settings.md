@@ -42,5 +42,10 @@ Your organization locks idle sessions after a set time. Unlock with your passwor
 Open the settings menu: language (English, Tiếng Việt, 日本語, 中文), appearance (light / dark / system)
 and theme (Default, Flat, 8-bit).
 
+**How do I set my own time zone?**
+Profile **Settings** › time zone, or quickly from the profile menu under Language. Every time in the app —
+including Activity analytics and date filters — then follows your zone; otherwise the organization's zone
+is used.
+
 See also: [Accounts & login](../docs/02-accounts-and-login.md) ·
 [Account settings](../docs/16-account-settings.md).

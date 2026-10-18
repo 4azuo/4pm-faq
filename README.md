@@ -46,7 +46,9 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [worker pools & routing](./faq/worker-pools-and-routing.md) · [account settings](./faq/account-settings.md) ·
 [projects](./faq/projects.md) · [AI commands](./faq/ai-commands.md) ·
 [git operations](./faq/git-operations.md) · [autonomous mode](./faq/autonomous-mode.md) ·
-[task books & approvals](./faq/task-books-and-approvals.md) · [customer accounts](./faq/customer-accounts.md) ·
+[autonomous settings](./faq/autonomous-settings.md) ·
+[task books & approvals](./faq/task-books-and-approvals.md) ·
+[tags, due dates & My work](./faq/tags-and-my-work.md) · [customer accounts](./faq/customer-accounts.md) ·
 [checklists](./faq/checklists.md) · [automation rules](./faq/automation-rules.md) ·
 [project content](./faq/project-content.md) · [generators](./faq/generators.md) ·
 [settings](./faq/settings.md) · [public API](./faq/public-api.md) ·

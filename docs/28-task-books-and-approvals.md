@@ -84,12 +84,29 @@ only change rows of **your own teams** (ADMINs and the PM can change all). Intak
 team onto its tasks and questions. A worker can be limited to serving certain teams (Members › AI
 routing).
 
+## Running tasks, trash & delete guards
+
+- Tasks the AI is running are listed as **read-only** rows with who runs them. **Unapproving** one stops the
+  run when you save; the work stays on the task branch and continues after re-approval.
+- Deleted **AI Todo** and **User Todo** rows go to **Trash** (kept 24 h by default) and can be restored. If
+  the ID was reused meanwhile, the row is restored with a **new ID** and needs approval again.
+- A row other rows still **depend** on can't be deleted — the notice names them.
+
+## Docs review (DOC rows)
+
+With the docs step on (see [Autonomous mode](./08-autonomous-mode.md#settings)), each request first gets a
+**DOC** row. **Review docs** shows each doc file of the round as a diff against the base, the files other
+open requests also change, and earlier rounds. Write your opinion and choose **Proceed** (accepted — the row
+moves to AI Done and its tasks may start from these docs) or **Revise** (opinion required — the AI runs
+another round, and may also update the request's mockups, sequences or change requests).
+
 ## Discussions
 
 **User Q&A holds only the AI's questions.** To ask *people* something — a teammate or the customer —
 use **Content › Discussions**:
 
-- Start a discussion, reply, mention people, and **resolve** it when settled.
+- Start a discussion, reply, mention people, and **resolve** it when settled. You can also start one right
+  from a User Todo, User Q&A or AI Todo row (chat icon).
 - **Link** a discussion to a request or task: that row can't be approved until its discussions are
   resolved, and intake reads the resolved discussions as context.
 - Discussions opened by customers are highlighted. They're also saved in the repository
@@ -101,10 +118,26 @@ Customer (CLIENT) accounts can **post requests** in User Todo, **answer** the AI
 discussions. Their rows carry a **Customer** badge, and you can sort/filter **Customer first**. See
 [Customer accounts](./29-customer-accounts.md).
 
-## Tags on AI Todo
+## Tags & due dates
 
-A task can carry **tags** that run a linked action when it's approved — for example syncing the project
-spec down to the worker's `project.spec.json`. The approval confirmation lists what each tag will do.
+- Every book (User Todo, User Q&A, AI Todo, AI Done) and every discussion has **Tags** and **Due** columns.
+  Tags come from the org catalog (Home › **Tags**, ADMIN) and the project's own tags (Settings › **Tags**, PM).
+- Due dates show **red** when overdue and **yellow** when due within 3 days; sort and filter by both.
+- Changing tags or the due date **keeps the approval** (they aren't part of the approved text). Intake carries a
+  request's tags and due date to its tasks.
+- A deleted tag stays on rows as a grey chip.
+
+## Actions on AI Todo
+
+A task can carry **actions** (the **Actions** column, formerly "Tag") that run when it's approved — for example
+syncing the project spec down to the worker's `project.spec.json`. The approval confirmation lists what each
+action will do.
+
+## My work
+
+Home › **My work** lists, across your projects, what waits on you — in progress, to check, to approve, to answer,
+discussions that mention you and external issue changes — with a timeline to the due date and personal memos. See
+[Tags, due dates & My work](../faq/tags-and-my-work.md).
 
 ## Plan limits
 

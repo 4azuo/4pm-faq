@@ -23,7 +23,9 @@ each answer.
 | AI commands & console | [ai-commands.md](./ai-commands.md) |
 | Git operations & merge | [git-operations.md](./git-operations.md) |
 | Autonomous mode | [autonomous-mode.md](./autonomous-mode.md) |
+| Autonomous settings explained | [autonomous-settings.md](./autonomous-settings.md) |
 | Task books, approvals & discussions | [task-books-and-approvals.md](./task-books-and-approvals.md) |
+| Tags, due dates & My work | [tags-and-my-work.md](./tags-and-my-work.md) |
 | Customer accounts (CLIENT) | [customer-accounts.md](./customer-accounts.md) |
 | Checklists | [checklists.md](./checklists.md) |
 | Automation rules | [automation-rules.md](./automation-rules.md) |

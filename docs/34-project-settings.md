@@ -16,7 +16,7 @@ project's PM and members granted the project-update permission (team leads don't
 ## Project access & security
 
 - **IP allowlist:** which IPs may open this project on the web/API (one IP or CIDR per line; empty = any).
-  It must stay inside the org's allowlist.
+  It must stay inside the org's allowlist and protects only this project (it doesn't block sign-in).
 - **Restrict AI to the project folder:** every AI prompt tells the agent to read, use and modify only
   content inside the project folder on the worker.
 
@@ -62,6 +62,15 @@ Have a reviewer worker vet **every AI input** before it runs — protecting proj
 - **Block image attachments:** reviews scan text, not images — turn this on to forbid pasting images.
 
 Every input adds a review round-trip (and an AI call when AI review is on), so expect slower runs.
+
+## Autonomous path
+
+**Send every change through autonomous** (on by default). While the project is ready (created or linked), the
+Console, AI generate and Git writes are refused, and changes are posted as **requests** in User Todo instead
+(the **AI request** button on file screens does that). File edits still commit to the base branch. Turn it off
+to allow direct runs; they then warn when workers run autonomous on the project. A project not created yet is
+not affected. The autonomous schedule and limits themselves are in Content › AI content › Autonomous — see
+[Autonomous settings explained](../faq/autonomous-settings.md).
 
 ## Lifecycle & danger zone
 

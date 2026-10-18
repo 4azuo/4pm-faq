@@ -57,6 +57,11 @@ default) while 4PM retries and notifies you. If the grace period lapses, the org
 The **statement** shows the current period (plan + add-ons as line items); the **payment history**
 lists past periods across both payment methods.
 
+**What do Upgrade / Downgrade / Switch mean?**
+In Billing › Change plan (which links to the full plan comparison), each plan button says whether it raises,
+lowers or just switches your plan. On the Pricing page, a signed-in ADMIN sees **Current plan**, **Upgrade**
+or **Downgrade** and goes straight to the change in Billing; members don't see plan buttons.
+
 **How do I sign up for Enterprise? What are the requirements and pricing?**
 Enterprise is a **custom, non-self-serve** plan — it isn't picked in **/billing** like Free/Pro/Max.
 Procedure, requirements and pricing are **arranged directly with the 4PM team**, not published in

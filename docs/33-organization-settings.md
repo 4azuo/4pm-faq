@@ -7,14 +7,14 @@ organization are listed at the end.
 
 | Section | What you set |
 | --- | --- |
-| **General** | Default **time zone** (used by schedules, rules and the CLI update hour), default **rows per page** in tables, the **idle lock** time for every member (0 = off), how many **worker-config template versions** are kept. |
+| **General** | Default **time zone** (times shown to everyone who hasn't picked their own, schedules, rules, analytics and the CLI update hour), default **rows per page** in tables, the **idle lock** time for every member (0 = off), how many **worker-config template versions** are kept. |
 | **Security** | **Two-factor authentication** policy (off · ADMINs only (default) · everyone), **password expiry** (0–365 days), the **org IP allowlist** (the outer boundary for every user's allowlist), and **allow sub-accounts without email** (such accounts can't use email verification, notifications or self-service password reset). |
 | **Tokens** | Session lifetimes: web access token (minutes), web refresh token (days), CLI realtime session token (hours), CLI device key (days, 0 = never expires), CLI max reconnect backoff. Empty = defaults. |
 | **CLI · daily auto-update** | Every day at the chosen hour (org time zone), each idle worker updates its CLI and restarts. Also enables per-tool auto-update in Worker tools. |
 | **Command history** | Whether command history files are stored, and for how many days. |
 | **Community** | Retention of 4rum posts, Messenger messages and attachments (capped by your plan), and the **edit / delete window** for authors (minutes; admins and moderators can always delete). |
 | **AI** | The **AI worker pool** that runs org-level AI tasks (AI checklist authoring, AI Research). That pool can't also be attached to a project. |
-| **Network** | Hosts blocked for **every** project's AI runs, and how long network logs are kept. See [Project content › Networks](./25-project-content.md#networks). |
+| **Network** | Hosts blocked for **every** project's AI runs (network logs always keep the last 30 days). See [Project content › Networks](./25-project-content.md#networks). |
 | **Storage** | Storage by content type, clearing old content, storage alerts and auto clear. See [Quotas, usage & notifications](./17-quotas-and-notifications.md#storage). |
 | **Marketplace hooks** | Whether projects may install hooks from other organizations' packages (off by default). |
 | **API integrations** (ADMIN / root) | Every API client of the organization and who it acts as; revoke or delete any. Each person creates their own clients in their profile — see [Public API](./32-public-api.md). |

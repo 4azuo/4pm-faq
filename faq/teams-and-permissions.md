@@ -37,5 +37,10 @@ Open the **invite link** in your email, review the org/email/roles, then set a *
 expired link shows an invalid-link message; ask your ADMIN to re-send. See
 [docs/18](../docs/18-teams-and-permissions.md#invitations--joining-an-org).
 
+**Can I filter and sort the Users, Teams and Projects lists?**
+Yes — they're grids with a filter and sort on every column, grid settings and Created / Updated dates. Their
+**Trash** shows when each item was deleted and can be searched, filtered and sorted too. Grouped projects
+keep their nested groups.
+
 See also: [Teams, members & permissions](../docs/18-teams-and-permissions.md) ·
 [Accounts & login](../docs/02-accounts-and-login.md).
