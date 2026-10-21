@@ -67,7 +67,9 @@ work is lost; a **Restarting** tag shows next to its CLI version meanwhile, and 
 resend later.
 
 **How do I stop a worker's autonomous mode before updating it?**
-Use **Stop / Start autonomous** on its row in Machine users — no need to open the project.
+Use **Stop / Start autonomous** on its row in Machine users — no need to open the project. To stop every
+worker at once (e.g. before **Update all CLIs**), use **Stop all autonomous** above the table. Each worker's
+switch is set; start them again per row, or per project with **Start all workers** in Autonomous.
 
 **Which workers are running AI right now, on which account?**
 A live **Running / Idle** status shows on the user page, the project header, the Console and the autonomous

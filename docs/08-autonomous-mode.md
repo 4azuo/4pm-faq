@@ -121,6 +121,8 @@ Every setting, its default and when to change it: [Autonomous settings explained
 | **Merge without a pull request** | project, ADMIN/PM | Merge finished tasks straight into the base branch (off; falls back to a PR). |
 | **AI resolves conflicting PRs** | project | Each cycle fixes one conflicting 4PM task PR (off). |
 | **Daily branch cleanup** + **after (days)** | project, ADMIN/PM | Delete dead 4PM task branches once a day (off; 14 days; restorable). |
+| **Archive finished requests after (days)** | project | Move requests done longer than this, with their tasks, to `.4pm/archive/` — searchable in AI content › Archive (30). |
+| **Books sync every (minutes)** | project | How often the pull request copying the books into the base branch is refreshed (10). |
 
 The project's Settings tab also holds **Send every change through autonomous** (on by default): while the
 project is ready, Console runs, AI generate and Git writes are refused and changes are posted as requests.
@@ -129,7 +131,15 @@ Each run uses the **model of the worker's AI profile** — there's no separate a
 
 ## Several workers & teams
 
-- Several workers can serve the same project: each claims different tasks.
+- Several workers can serve the same project: each claims different requests and tasks, and approved
+  requests are taken in **in parallel**. **Start all workers / Pause all workers** (Workers panel), the
+  Start / Pause button on each row of the **Projects** list, and **Stop all autonomous** in Machine users switch
+  many at once.
+- Changes inside **git submodules** get their own branch and pull request in the submodule's repository; the
+  main pull request waits as a draft until they merge, then is merged automatically when it only moves the
+  submodule links.
+- What the AI writes into the repo (docs, comments, commits, pull requests, book rows) follows the spec's
+  **Output language** when set.
 - In **Members › AI routing** you can choose which **teams** each worker serves; a restricted worker then
   takes only requests and tasks of those teams. See
   [Worker pools & AI routing](./24-worker-pools-and-routing.md).

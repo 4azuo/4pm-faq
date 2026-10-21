@@ -7,12 +7,15 @@ while you watch and approve from the dashboard. See [docs/08](../docs/08-autonom
 
 **How do I turn it on/off?**
 Project › Content › AI content › **Autonomous** › Overview:
-- **Start all / Pause all** switches the whole project (every worker).
+- **Start autonomous / Pause autonomous** flips the **project** switch.
+- **Start all workers / Pause all workers** (Workers panel) flips every worker's own switch at once.
 - Each row of the **Workers** table has its own Start / Pause.
 - A worker runs cycles only when the project switch, 4PM's permission and its own switch are all on.
 
-You can also stop or start a worker's autonomous mode from **Home › Machines › Machine users** — handy before
-updating its CLI. There's nothing to install on the worker (no cron).
+Elsewhere: the **Projects** list has a Start / Pause button on each project's row, and **Home › Machines ›
+Machine users** can stop or start one worker — or **Stop all autonomous** for every worker at once (handy
+before updating CLIs). The new state shows within a second, with progress on the button meanwhile. There's
+nothing to install on the worker (no cron).
 
 **What do the columns of the Workers table mean?**
 - **Teams** — which teams' work the worker takes (set in Members › AI routing).
@@ -142,3 +145,34 @@ requests wait (managers are notified and Last check says so) but approved tasks 
 **Can old task branches be cleaned up?**
 Yes — **Git › Branch cleanup** lists dead branches to delete (and restore). An ADMIN / PM can turn on
 **Daily branch cleanup** in the autonomous settings. See [Git operations](./git-operations.md).
+
+**Does each request run on its own branch too?**
+Yes. A request's intake, its docs round and its tasks each run on their own branch, like a task: they can be
+resumed, **retried** after a failure and always start from the project as it is in git. **Retry** is offered
+for a request whose intake kept failing, and for a request or docs pull request closed without merge.
+
+**A row says "Waiting for the pull request … to merge".**
+A request's mockups and sequence diagrams, and its accepted docs, reach the base branch through their **own
+pull request**; the request's tasks start once it is merged. Click the link to review and merge it. The line
+clears within one autonomous tick after the merge (squash merges included) — even while the worker is paused,
+outside its hours or busy.
+
+**Several workers serve my project — do they step on each other?**
+No. Approved requests are taken in **in parallel**: each request is claimed by one worker only, and a worker
+that loses a request to another takes the next one in the same cycle. Tasks are claimed the same way.
+
+**My docs or code live in a git submodule. Does autonomous handle it?**
+Yes. Files the AI writes inside a submodule (for example a `docs` folder that is its own repository) go to
+**that** repository, on its own branch and pull request — Review docs shows them and AI Done lists them. The
+main pull request waits as a **draft** until the submodule pull requests merge, then points at their merge;
+if it only moves the submodule links it is merged automatically, otherwise you are told to merge it.
+
+**A template update says it is required — do I turn autonomous off?**
+No. A **required** project-template update runs through autonomous: autonomous **pauses** until the update's
+pull request is merged, then resumes on its own. An optional update offers **Open autonomous settings** to
+switch the autonomous path if you want.
+
+**What is the language of the docs, commits and PRs the AI writes?**
+The project's **Output language** (Spec › 1. Basic). Set it once and every AI run writes docs, code comments,
+commit messages, pull requests and book rows in it; code identifiers, paths and IDs stay as they are. Empty
+means no rule — the AI follows the language of what it reads. See [Projects](./projects.md).

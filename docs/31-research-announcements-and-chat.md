@@ -34,8 +34,15 @@ A **sent history** lets you reuse a past message. Each plan caps the recipients 
   sends, Shift+Enter adds a line), attach files, react, edit, delete (with undo), quote and forward to
   other conversations in the project. Each conversation has **Files** and **Links** tabs; groups have a
   **Members** tab.
-- The **Chat** tab on the right edge of every page shows your conversations from all projects in one
-  place, with search, a project filter and unread markers.
+- The **Chat** tab on the right edge of every page opens the **Chat dock**:
+  - **Chats** — your conversations from all projects in one place, with search, a project filter (every
+    project you can see; ADMINs see all) with a go-to button to the project's Messenger, and unread markers.
+  - **Memo** — your personal memos (private to you), filed under a project — the one you're viewing is picked
+    for you; ADMINs can file under any project. Memos added on a book row or a My work item show here too.
+  - **Discuss** — the discussions that address or mention you: read, reply, resolve or reopen them in place.
+    The tab counts what waits on you.
+  - A red dot on Chats / Discuss (and on the edge tab) means something new. Empty tabs link to the project's
+    Messenger or Discussions. See [Chat dock, memos & discussions](../faq/chat-dock-and-memos.md).
 - The Chat panel's **Requests** tab lists your [change requests](./26-checklists.md#change-requests)
   and their outcome.
 - **Presence:** an online / idle / offline dot on avatars across the app.

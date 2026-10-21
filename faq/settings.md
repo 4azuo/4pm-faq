@@ -44,6 +44,33 @@ Edit it in Content › **Spec**; Settings shows it read-only and syncs on save.
 The deployment, organization, their account or the project is limited to approved IP addresses. They
 send the shown IP to an administrator, who adds it to the right allowlist.
 
+**Which language does the AI write the project's docs, comments and commits in?**
+The spec's **Output language** (Content › Spec › 1. Basic) — see [Spec settings that steer the AI](#spec-settings-that-steer-the-ai).
+
+**How do I hide or show columns in a table, or change its page size?**
+The table's **⚙ Grid settings**: **Columns**, **Rows per page** (or **Auto** to fit the screen), **Pagination**,
+**Remember sort** and **Remember filters**. It applies to that table, for you, in this browser; **Reset to
+defaults** undoes it.
+
+**Where are a worker's own settings?**
+Home › **Machines** › Machine users › the machine user's page: AI accounts and failover order, models, usage
+limits, tools, restart. See [CLI & worker config](./cli-and-worker-config.md). A worker's autonomous schedule is
+in the project's Autonomous › Settings — see [Autonomous settings](./autonomous-settings.md).
+
+## Your personal settings explained
+
+Where: the profile menu (top right) › **Settings**, or your user page › **Settings**. Only you see and change
+these; they follow you on every device.
+
+| Setting | Meaning |
+| --- | --- |
+| **Language** | The language of the 4PM screens (English, Tiếng Việt, 日本語, 中文). Also in the profile menu. It doesn't change what the AI writes in a project — that's the project's Output language. |
+| **Time zone** | *Organization default* (the org's zone) or your own. Every time in the app — tables, the header clock, analytics days, date filters — is shown in it. Quick switch: profile menu, under Language. |
+| **Appearance** | Light, Dark or System (follow the computer). |
+| **Theme / Style** | The look of the app — Default, Flat or 8-bit. |
+
+Security items (password, two-factor, passkeys, sign-in methods) are in [Account settings](./account-settings.md).
+
 ## Organization settings explained
 
 ### General
@@ -104,6 +131,16 @@ read-only.
 | **Project manager (PM)** | One PM per project; saving replaces the current one. The PM manages the project's settings, rules, autonomous and approvals. |
 | **Project group** | Places the project in a nested group (e.g. Backend › Services) in the projects grid. |
 | **Copy project** | Creates a **draft** copy with this project's spec only; nothing is created until you run the setup wizard. |
+
+### Spec settings that steer the AI
+
+Some project-wide choices live in the **spec** (Content › Spec), because the AI reads them from the repo:
+
+| Setting | Meaning |
+| --- | --- |
+| **Output language** (1. Basic) | The language the AI writes this project's repo content in: docs, code comments and log messages it adds, commit messages, pull requests and book rows. Pick a listed language or **Other…** and type one. **Empty = no rule** (the AI follows the language of what it reads). Identifiers, paths, IDs and commit types never change; product text still follows the project's i18n; rows written earlier keep their language. |
+| **Doc types** (`docs_types`) | Which kinds of docs the project keeps (ADR, API, screens…). When set, autonomous runs a **docs round** before code — see [Autonomous settings](./autonomous-settings.md#docs-step); the template of each type is in AI content › Doc templates. |
+| **AI model** | The model the project's AI CLI uses by default (*Default* = the CLI's own). |
 
 ### Tags
 

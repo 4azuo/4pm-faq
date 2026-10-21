@@ -71,6 +71,13 @@ GitHub App for GitHub, GitLab service account for GitLab — both give short-liv
 **Git › Configuration** — it works even while the worker is offline. You need the git configuration
 permission.
 
+**How are git submodules delivered?**
+A change the AI makes inside a submodule is committed to **that submodule's** repository on its own branch,
+with its own pull request. The main repository's pull request waits as a **draft** until the submodule pull
+requests are merged, then moves its submodule links to their merge commits. If moving the links is all it
+does, it is merged automatically; otherwise you're told to merge it. AI Done lists every submodule pull
+request with its state.
+
 **What are the `dev/…` and `autonomous-books/…` branches?**
 Created by autonomous mode: `dev/<base>/<group>/<task>` holds one task's work (delivered as a PR), and
 `autonomous-books/<base>` holds the task books. Don't protect the books branch.

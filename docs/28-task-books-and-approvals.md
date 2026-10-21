@@ -139,6 +139,25 @@ Home › **My work** lists, across your projects, what waits on you — in progr
 discussions that mention you and external issue changes — with a timeline to the due date and personal memos. See
 [Tags, due dates & My work](../faq/tags-and-my-work.md).
 
+## Working the rows
+
+- **Compact rows**: ID, a short **title** (≤ 80 characters) with tag / due / depends chips, group and status.
+  Expand a row to edit its fields; its **actions bar** (approve, discussions, memos, view design, review docs,
+  delete) sits at the top of the expander. Choose columns from the grid's **⚙ › Columns**.
+- **Markers**: on the AI content rail, a **red** count is what waits on you (to approve or answer) and a **blue**
+  dot means a book changed since you last opened it; a red dot on View design / Review docs means a change or a
+  docs round waits for your review. A **⚑ N** badge marks the row N others wait for; a red **Waiting for** line
+  names what a row still waits on.
+- **Bulk**: tick rows, then **Approve (n)** or **Delete (n)** and **Save**.
+- **Lifecycle**: taken-in requests stay in User Todo as **Taken in**, then **Done**; AI Todo lists finished tasks
+  as read-only **Done** rows (hidden by the Status filter by default). Finished requests move to the
+  **Archive** after the archive age (30 days). Every request appears as a lane on the **Flow** board. See
+  [Flow & Archive](../faq/flow-and-archive.md).
+- **AI Done delivery**: each row shows its delivery state (PR open / merged / closed / merged directly),
+  structured **Notes** (branch, pull request and submodule pull requests with live states) and **Files (n)** —
+  every changed file with its content and diff, read from the task's own commits, still readable after branch
+  cleanup.
+
 ## Plan limits
 
 New rows per book per month are capped by plan (Free 300, Pro 1 000, Max 5 000, Enterprise unlimited).

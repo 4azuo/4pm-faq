@@ -82,3 +82,87 @@ AI content › **Flow** — one lane per request, from request through docs, tas
 
 **Can I edit AI Done?**
 No, it's a read-only history. Use **AI Verify** on it to check delivered work and propose follow-ups.
+
+## Reading and working the rows
+
+**Why does each row show only one line?**
+The books show **compact rows**: ID, a short **title** with its tag / due / depends chips, group and status.
+**Expand** a row (the arrow by its number) to read and edit everything else. The title (up to 80 characters)
+is filled in by AI generate, AI edit, the autonomous intake and *From issue*; you can edit it in the row's
+details.
+
+**How do I choose which columns a book shows?**
+Open the grid's **⚙ Grid settings** › **Columns**. Team, tags, due date, depends and approvers are hidden by
+default on the book grids. The same popover sets rows per page and whether sort / filters are remembered — per
+grid, in your browser.
+
+**What is the bar at the top of an expanded row?**
+The row's **actions as labeled buttons** — approve, discussions, memos, view design, review docs, delete — so
+you don't need to go back to the **⋯** menu.
+
+**What do the red and blue marks on the AI content rail mean?**
+**Red** always means *waiting on you*: the red count on User Todo, User Q&A and AI Todo is the number of items
+for you to approve or answer, and a red dot on **View design** / **Review docs** means an ER or diagram change
+or a docs round waits for your review. **Blue** means *changed since you last opened it*. View design links
+straight to the waiting change in ER / Diagram › Changes, where you approve it.
+
+**What is the ⚑ N badge by an ID?**
+It marks the **root** of a chain: the row that N other rows wait for. Hover it to see which rows wait. Resolve
+that row first — the rest follow.
+
+**What is the red "Waiting for" line under a title?**
+The requests, questions or tasks that row still waits on (its dependencies, or another request's tasks). It
+clears by itself when they're done; the grids re-read the books every 30 seconds while a row is waiting.
+
+**How do I approve or delete many rows at once?**
+Tick the rows: the footer shows how many are selected, with **Clear**, **Approve (n)** and **Delete (n)**.
+Then **Save** — that signs the approvals, or moves the deleted rows to Trash.
+
+**What's in the row's ⋯ menu?**
+Its **discussions** (open one, or start a new one), **My memos** / **New memo** (your private notes on the
+row) and the row's other actions. **Approve** stays a separate button.
+
+**Requests stay in User Todo after the AI took them in — why?**
+On purpose: a taken-in request is marked **Taken in**, then **Done** when all its tasks are finished, so you
+can follow it. It leaves the live book only when it's archived. See [Flow & Archive](./flow-and-archive.md).
+
+**AI Todo shows finished tasks as "Done" rows.**
+Those are read-only. The **Status** filter hides Done rows by default — pick **All** or **Done** to see them.
+
+**How do I find tasks that have a mockup, an ER change or a docs round?**
+Use the **Runs** filter in AI Todo: by size, or by the evidence a task has (mockup, sequence, ER change,
+diagram change, images, DOC round). A DOC row shows **Docs ×N** in Runs, and **View design** has a **Docs**
+tab to read its doc files.
+
+**A mockup has several tabs in the viewer.**
+One per **state** or server response of the screen (empty, loading, error…), also in full screen.
+
+**What does each book say under its title?**
+A one-line reminder of what the book is for — User Todo (your requests), User Q&A (the AI's questions), AI
+Todo (tasks to implement), AI Done (what was delivered).
+
+## Delivery in AI Done
+
+**What does the Delivery state mean?**
+How the task reached the base branch: **PR open**, **merged**, **closed** (without merge) or **merged
+directly** (when the project merges without a pull request). It's refreshed on every autonomous tick.
+
+**What's in an expanded AI Done row?**
+**Notes** as labeled lines: the **branch** (with a copy button), the **pull request** link with its state
+(Open / Merged / Closed / Merged directly, plus *Conflicts* while it has any), one line per **submodule** pull
+request with its own state, and any other remarks. **Show raw** shows the original text.
+
+**How do I see the files a task changed?**
+Click **Files (n)** in the expanded row. The left side lists every changed file by repository (root first,
+then each submodule) with A / M / D / R badges and a filter; pick one to see its **Content** or its
+**Changes** (a diff against the base the task started from). The header says where the files are read from —
+the merged commit, the task branch, the pull-request ref or, as a last resort, the base branch (with a warning).
+That's why the files stay readable even after **branch cleanup** deleted the task branch.
+
+**An old row shows a shorter file list.**
+Rows delivered before the file record existed show the list that was saved then (cut at 20 files); folders
+open their contents.
+
+**Can I discuss a finished task?**
+Yes — start a discussion from the AI Done row. If it leads to more work, turn the discussion into a
+**follow-up request** in User Todo.

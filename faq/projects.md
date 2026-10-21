@@ -42,6 +42,21 @@ A description of what the project is and what to build. You edit it with AI help
 **Review** (an overall assessment) and **Compose** (rewrite from the review). See
 [docs/05](../docs/05-projects.md#the-spec-and-ai-assist).
 
+**What is the "Output language" field in the spec?**
+Spec › **1. Basic** › **Output language** — the language the AI writes this project's **repo content** in:
+documents (README, the AI guide, `docs/…`, the evidence guide), code comments and log messages it adds,
+commit messages, pull-request titles and bodies, and book rows. Pick one from the list (English, Tiếng Việt,
+日本語, 中文, 한국어, Français, Deutsch, Español, Português, ไทย, Bahasa Indonesia) or **Other…** and type a
+language name. It is saved with the spec, so the whole team shares it.
+
+- **Empty** (the default) = no rule: the AI follows the language of what it reads, as before.
+- Code identifiers, file and folder names, paths, IDs (`TSK-…`), JSON keys and commit types (`feat(…)`) never
+  change.
+- Product text shown to *your* users still follows the project's own i18n, not this field.
+- It isn't retroactive: rows and docs written earlier keep their language. The AI guide gets a line stating
+  the rule when it is generated, so a free-typed Console run follows it too.
+- The 4PM screens' language is your own UI language (profile menu) — unrelated to this field.
+
 **Review / compose locked my form.**
 That's on purpose: while AI review or compose rewrites the spec, the form is locked so your edits
 aren't overwritten. It unlocks when the run finishes.

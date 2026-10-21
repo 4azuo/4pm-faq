@@ -48,7 +48,8 @@ repo, **isolated from customer projects**, edited here in git by the platform te
 [git operations](./faq/git-operations.md) · [autonomous mode](./faq/autonomous-mode.md) ·
 [autonomous settings](./faq/autonomous-settings.md) ·
 [task books & approvals](./faq/task-books-and-approvals.md) ·
-[tags, due dates & My work](./faq/tags-and-my-work.md) · [customer accounts](./faq/customer-accounts.md) ·
+[tags, due dates & My work](./faq/tags-and-my-work.md) · [Flow & Archive](./faq/flow-and-archive.md) ·
+[Chat dock & memos](./faq/chat-dock-and-memos.md) · [customer accounts](./faq/customer-accounts.md) ·
 [checklists](./faq/checklists.md) · [automation rules](./faq/automation-rules.md) ·
 [project content](./faq/project-content.md) · [generators](./faq/generators.md) ·
 [settings](./faq/settings.md) · [public API](./faq/public-api.md) ·

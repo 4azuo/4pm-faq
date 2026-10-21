@@ -4,7 +4,8 @@ Where: Project › Content › AI content › **Autonomous** › **Settings** (F
 panels:
 
 - **Project settings (all workers)** — shared by every worker of the project: claims, attempts, run timeout,
-  task size, repo folders, approvals of diagrams, how tasks are delivered, docs step, branch cleanup.
+  task size, repo folders, approvals of diagrams, how tasks are delivered, docs step, branch cleanup,
+  archive age and books sync.
 - **Worker settings** — one worker at a time: schedule, quiet hours, ticks per day, failure stop, log
   retention and AI-usage caps. Pick the worker from the Workers table (⚙ **Settings of this worker**).
 
@@ -77,6 +78,19 @@ Where autonomous writes its files in the repo (repo-relative path such as `.4pm/
 | **Daily branch cleanup** | Off | ADMIN / PM only | Once a day, delete the **4PM task branches** that are merged, whose PR is closed or whose task is gone. Other branches are never deleted automatically. Every deletion is logged and restorable in **Git › Branch cleanup**. |
 | **Clean up after (days)** | 14 | ADMIN / PM only | Only branches with no commit for this many days are cleaned up. |
 
+### Archive & books sync
+
+| Setting | Default | What it means |
+| --- | --- | --- |
+| **Archive finished requests after (days)** | 30 | A request that has been **done** for longer than this moves — with its tasks, questions and records — out of the live books into `.4pm/archive/` (still in git). Search it in AI content › **Archive**. Lower it to keep the books short; raise it to keep finished work in view longer. |
+| **Books sync every (minutes)** | 10 | The books live on the `autonomous-books/<base>` branch while the workers write to them; a pull request copies them into the base branch. This is how often that pull request is refreshed. |
+
+### Doc templates (not in Settings)
+
+What the docs round writes for each doc type — template file, instructions, numbered names (`0001-…`) — is set
+in AI content › **Doc templates** (organization templates come from Home › **Docs templates**). See
+[Generators & doc types](./generators.md).
+
 ## The project-level switch: "Send every change through autonomous"
 
 This one lives in the project's **Settings** tab (panel **Autonomous path**), not in the Autonomous screen.
@@ -113,3 +127,11 @@ Only an ADMIN or the project's PM can change it (same for daily branch cleanup).
 
 **Can I edit the settings as JSON?**
 Yes — switch **Form / JSON**. Invalid values are refused with the field that's wrong.
+
+**Finished requests vanished from User Todo.**
+They were archived after **Archive finished requests after (days)**. Find them in AI content › **Archive**, or
+raise the number.
+
+**Why does the base branch get a "books" pull request?**
+That's the **books sync**: it copies the task books from the `autonomous-books/<base>` branch into the base
+branch every **Books sync every (minutes)**, so the books are in your main history too.

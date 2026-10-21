@@ -61,6 +61,11 @@ Each mockup / sequence / diagram with its task status (Done, In progress, Approv
 file last changed, grouped by request. Mockups and sequences have a **History**: view an earlier version,
 compare it with the current one and **restore** it (saved as a new version).
 
+**A sequence diagram says it can't be drawn.**
+The AI's sequence diagrams are **checked before they are saved** and their syntax is fixed when needed. If one
+still can't be drawn, the viewer says so — with the parser's error — above the diagram's source, instead of
+showing raw code. Ask the AI to fix it with a request, or edit the file.
+
 **What does the Graph tab do?**
 It maps your docs and code: filter by kind, status and feature, search features, and switch between a
 **graph** and a **tree**. The **structure score** (1–100) flags docs nested too deep, orphans, broken links
@@ -71,7 +76,8 @@ moves to improve the structure.
 The **RAG** tab searches the repo's documents by meaning: one result per file (other matches expand).
 **Ask AI** (Pro and higher) — describe what you need and the AI lists the documents to read, in order.
 **Settings**: index status and **Reindex**, minimum score, max results, model. The worker needs no Python;
-install shows a checklist of what's missing.
+install shows a checklist of what's missing. If the project's repository isn't cloned on the worker yet, RAG
+says so — run **Sync repos** first (it also repairs a folder where RAG was opened before the clone).
 
 **What is "Open in Docs & AI"?**
 On RAG results, AI doc-finder rows and Graph nodes: it jumps to that file in the Docs & AI browser.
