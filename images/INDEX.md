@@ -6,4 +6,4 @@ seeded demo organization and a test project. Do not edit by hand; re-run the cap
 
 | Preview | File | Screen (route) | Shows | Used by |
 | --- | --- | --- | --- | --- |
-| ![project-new](project-new.png) | `project-new.png` | `/projects/new` | New project wizard: create from a new or an existing repository. | [05-projects](../docs/05-projects.md) |
+| ![project-content](project-content.png) | `project-content.png` | `/projects/<id>?tab=overview` | Project › Content: files, AI content items and the project setup. | [25-project-content](../docs/25-project-content.md) |
